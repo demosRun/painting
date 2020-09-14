@@ -1,0 +1,98 @@
+<template lang="pug">
+.page2
+  .so.so-0
+    span.so.so-1 贵州
+    span.so.so-2 山西
+    span.so.so-3 新疆
+    span.so.so-4 安徽
+    span.so.so-5 陕西
+    span.so.so-6 山东
+    img.so.so-7(src="@|255.png|")
+    img.so.so-8(src="@|269.png|")
+    img.so.so-9(src="@|281.png|")
+    img.so.so-10(src="@|289.png|")
+    img.so.so-11(src="@|301.png|")
+    img.so.so-12(src="@|311.png|")
+</template>
+<script>
+module.exports = {
+}
+</script>
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 13px;
+  top: 309px;
+  width: 707px;
+  height: 912px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 519px;
+  top: 883px;
+  z-index: -1;
+}
+.so-2 {
+  left: 158px;
+  top: 883px;
+  z-index: -2;
+}
+.so-3 {
+  left: 516px;
+  top: 581px;
+  z-index: -3;
+}
+.so-4 {
+  left: 153px;
+  top: 581px;
+  z-index: -4;
+}
+.so-5 {
+  left: 520px;
+  top: 254px;
+  z-index: -5;
+}
+.so-6 {
+  left: 158px;
+  top: 254px;
+  z-index: -6;
+}
+.so-7 {
+  left: 406px;
+  top: 647px;
+  z-index: -7;
+}
+.so-8 {
+  left: 430px;
+  top: 0px;
+  z-index: -8;
+}
+.so-9 {
+  left: 59px;
+  top: 331px;
+  z-index: -9;
+}
+.so-10 {
+  left: 19px;
+  top: 37px;
+  z-index: -10;
+}
+.so-11 {
+  left: 0px;
+  top: 710px;
+  z-index: -11;
+}
+.so-12 {
+  left: 358px;
+  top: 386px;
+  z-index: -12;
+}
+span {
+  color: #4B443C;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 45px;
+}
+</style>

@@ -1,0 +1,68 @@
+<template lang="pug">
+.page6
+  .so.so-0
+    img.so.so-1(src="@|page6-97.png|")
+    img.so.so-2(src="@|page6-98.png|")
+    img.so.so-3(src="@|page6-99.png|")
+    img.so.so-4(src="@|page6-100.png|")
+    img.so.so-5(src="@|page6-48.png|")
+    img.so.so-6(src="@|page6-47.png|")
+    img.so.so-7(src="@|page6-106.png|")
+    img.so.so-8(src="@|page6-105.png|")
+</template>
+<script>
+module.exports = {
+}
+</script>
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 0px;
+  top: 208px;
+  width: 750px;
+  height: 1213px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 72px;
+  top: 513px;
+  z-index: -1;
+}
+.so-2 {
+  left: 74px;
+  top: 388px;
+  z-index: -2;
+}
+.so-3 {
+  left: 74px;
+  top: 234px;
+  z-index: -3;
+}
+.so-4 {
+  left: 77px;
+  top: 0px;
+  z-index: -4;
+}
+.so-5 {
+  left: 33px;
+  top: 357px;
+  z-index: -5;
+}
+.so-6 {
+  left: 33px;
+  top: 201px;
+  z-index: -6;
+}
+.so-7 {
+  left: 160px;
+  top: 548px;
+  z-index: -7;
+}
+.so-8 {
+  left: 0px;
+  top: 477px;
+  z-index: -8;
+}
+</style>

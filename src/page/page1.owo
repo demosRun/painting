@@ -1,0 +1,102 @@
+<template lang="pug">
+.page-1
+  .so.so-0
+    img.so.so-2(src="@|56.png|")
+    img.so.so-3(src="@|12.png|")
+    //- 输入框
+    input.so.so-1(type="text")
+  //- 背景
+  img.so.so-4(src="@|57.png|")
+  //- 点击下一步的文字
+  .text-box 胡汉三
+  .button(o-tap="next") 下一步
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.animate('fadeInUpBig', this.query('.so-3'))
+    },
+    next: function () {
+      this.$el.classList.add('next')
+      this.$target.style.display = 'none'
+      setTimeout(() => {
+        owo.go('page2')
+      }, 3000);
+    }
+  }
+</script>
+
+
+<style lang="less">
+.page-1 {
+
+}
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;
+  transition: opacity 2s;
+}
+.so-1 {
+  left: 193px;
+  top: 524px;
+  z-index: 2;
+  background-image: url('@|17.png|');
+  height: 50px;
+  line-height: 50px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 25px;
+  width: 180px;
+}
+.so-2 {
+  left: 187px;
+  top: 477px;
+}
+.so-3 {
+  left: 0px;
+  top: 467px;
+}
+.so-4 {
+  left: 35px;
+  top: 290px;
+  z-index: -4;
+}
+.button {
+  position: absolute;
+  width: 200px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 30px;
+  text-align: center;
+  background-color: goldenrod;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 10%;
+}
+.text-box {
+  background-image: url('@|page1-text.png|');
+  width: 502px;
+  height: 291px;
+  transition: opacity 2s;
+}
+.text-box {
+  position: absolute;
+  left: 33px;
+  right: 0;
+  bottom: 0;
+  top: -80px;
+  margin: auto;
+  opacity: 0;
+}
+</style>
