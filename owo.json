@@ -139,6 +139,21 @@
 			"name": "page8",
 			"src": "/src/page/page8.owo",
 			"type": "page"
+		},
+		{
+			"name": "page9",
+			"src": "/src/page/page9.owo",
+			"type": "page"
+		},
+		{
+			"name": "page10",
+			"src": "/src/page/page10.owo",
+			"type": "page"
+		},
+		{
+			"name": "page11",
+			"src": "/src/page/page11.owo",
+			"type": "page"
 		}
 	],
 	"mode": {

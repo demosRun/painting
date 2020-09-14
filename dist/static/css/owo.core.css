@@ -521,7 +521,149 @@ li {
   top: 0px;
   z-index: -4;
 }
+.page8 .so {
+  position: absolute;
+}
 
+.page8 .so-0 {
+  left: 0px;
+  top: 202px;
+  width: 750px;
+  height: 1160px;
+  z-index: 0;
+}
+
+.page8 .so-1 {
+  left: 73px;
+  top: 388px;
+  z-index: -1;
+}
+
+.page8 .so-2 {
+  left: 73px;
+  top: 234px;
+  z-index: -2;
+}
+
+.page8 .so-3 {
+  left: 76px;
+  top: 0px;
+  z-index: -3;
+}
+
+.page8 .so-4 {
+  left: 428px;
+  top: 844px;
+  z-index: -4;
+}
+
+.page8 .so-5 {
+  left: 26px;
+  top: 564px;
+  z-index: -5;
+}
+
+.page8 .so-6 {
+  left: 406px;
+  top: 522px;
+  z-index: -6;
+}
+
+.page8 .so-7 {
+  left: 0px;
+  top: 948px;
+  z-index: -7;
+}
+.page9 .so {
+  position: absolute;
+}
+
+.page9 .so-0 {
+  left: 86px;
+  top: 337px;
+  width: 664px;
+  height: 917px;
+  z-index: 0;
+}
+
+.page9 .so-1 {
+  left: 192px;
+  top: 198px;
+  z-index: -1;
+}
+
+.page9 .so-2 {
+  left: 203px;
+  top: 818px;
+  z-index: -2;
+}
+
+.page9 .so-3 {
+  left: 0px;
+  top: 0px;
+  z-index: -3;
+}
+.page10 .so {
+  position: absolute;
+}
+
+.page10 .so-0 {
+  left: 42px;
+  top: 167px;
+  width: 708px;
+  height: 1233px;
+  z-index: 0;
+}
+
+.page10 .so-1 {
+  left: 180px;
+  top: 776px;
+  z-index: -1;
+}
+
+.page10 .so-2 {
+  left: 53px;
+  top: 0px;
+  z-index: -2;
+}
+
+.page10 .so-3 {
+  left: 161px;
+  top: 994px;
+  z-index: -3;
+}
+
+.page10 .so-4 {
+  left: 285px;
+  top: 336px;
+  z-index: -4;
+}
+
+.page10 .so-5 {
+  left: 30px;
+  top: 656px;
+  z-index: -5;
+}
+
+.page10 .so-6 {
+  left: 0px;
+  top: 456px;
+  z-index: -6;
+}
+
+.page10 .so-7 {
+  left: 330px;
+  top: 148px;
+  z-index: -7;
+}
+.page11 .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
 
 /* 动画效果 */
 @keyframes fadeInUpBig {
