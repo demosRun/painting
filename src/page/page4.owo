@@ -7,6 +7,12 @@
 </template>
 <script>
 module.exports = {
+  created: function () {
+    owo.animate('fadeInDown', this.query('.so-3'))
+    setTimeout(() => {
+      owo.go('page5//fade/moveFromRight/true/fade/moveFromLeft')
+    }, 3000);
+  }
 }
 </script>
 <style lang="less">

@@ -1,8 +1,8 @@
 <template lang="pug">
 .page8
   .so.so-0
-    img.so.so-1(src="@|88.png|")
-    img.so.so-2(src="@|87.png|")
+    img.so.so-1(src="@|88.png|" o-tap="next")
+    img.so.so-2(src="@|87.png|" o-tap="next")
     img.so.so-3(src="@|86.png|")
     img.so.so-4(src="@|95.png|")
     img.so.so-5(src="@|94.png|")
@@ -11,6 +11,9 @@
 </template>
 <script>
 module.exports = {
+  next: function (name) {
+    owo.go('page9//fade/moveFromRight/true/fade/moveFromLeft')
+  }
 }
 </script>
 <style lang="less">
@@ -25,14 +28,12 @@ module.exports = {
   z-index: 0;;
 }
 .so-1 {
-  left: 73px;
-  top: 388px;
-  z-index: -1;
+  left: 35px;
+  top: 365px;
 }
 .so-2 {
-  left: 73px;
-  top: 234px;
-  z-index: -2;
+  left: 35px;
+  top: 205px;
 }
 .so-3 {
   left: 76px;

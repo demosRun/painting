@@ -2,16 +2,17 @@
 .page6
   .so.so-0
     img.so.so-1(src="@|page6-97.png|")
-    img.so.so-2(src="@|page6-98.png|")
-    img.so.so-3(src="@|page6-99.png|")
+    img.so.so-2(src="@|page6-98.png|" o-tap="next")
+    img.so.so-3(src="@|page6-99.png|" o-tap="next")
     img.so.so-4(src="@|page6-100.png|")
-    img.so.so-5(src="@|page6-48.png|")
-    img.so.so-6(src="@|page6-47.png|")
     img.so.so-7(src="@|page6-106.png|")
     img.so.so-8(src="@|page6-105.png|")
 </template>
 <script>
 module.exports = {
+  next: function (name) {
+    owo.go('page7//fade/moveFromRight/true/fade/moveFromLeft')
+  }
 }
 </script>
 <style lang="less">
@@ -31,14 +32,12 @@ module.exports = {
   z-index: -1;
 }
 .so-2 {
-  left: 74px;
-  top: 388px;
-  z-index: -2;
+  left: 35px;
+  top: 360px;
 }
 .so-3 {
-  left: 74px;
-  top: 234px;
-  z-index: -3;
+  left: 35px;
+  top: 200px;
 }
 .so-4 {
   left: 77px;

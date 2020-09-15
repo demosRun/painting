@@ -85,6 +85,11 @@
 		{
 			"name": "autoScale",
 			"src": "https://cunchu.site/owo/plug/autoScale.js"
+		},
+		{
+			"name": "toast",
+			"afterbody": true,
+			"src": "./owo_modules/toast.js"
 		}
 	],
 	"styleList": [

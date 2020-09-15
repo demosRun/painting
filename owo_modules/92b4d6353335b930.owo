@@ -1,17 +1,73 @@
 <template lang="pug">
 .loading-box
-  img.loading(src="https://cunchu.site/ozzx/resource/loadingLogo.png")
-  .loading-bar
-    .num-bar
-  span.text Loading
-  .num 0%
+  img.loading(src="@|loading.png|" o-animation="flicker")
+  img.loading-bg(src="@|loading-bg.png|")
 </template>
 
 <script>
   module.exports = {
     data: {
       imgList: [
-        ''
+        '@|58.jpg|',
+        '@|loading-bg-2.png|',
+        '@|page11.jpg|',
+        '@|57.png|',
+        '@|page4-100.png|',
+        '@|page7-53.png|',
+        '@|loading-bg.png|',
+        '@|page6-105.png|',
+        '@|12.png|',
+        '@|page6-106.png|',
+        '@|99.png|',
+        '@|98.png|',
+        '@|page5-107.png|',
+        '@|page9-32.png|',
+        '@|page4-99.png|',
+        '@|page5-100.png|',
+        '@|page6-97.png|',
+        '@|94.png|',
+        '@|page10-112.png|',
+        '@|255.png|',
+        '@|269.png|',
+        '@|page10-111.png|',
+        '@|281.png|',
+        '@|page5-108.png|',
+        '@|95.png|',
+        '@|92.png|',
+        '@|93.png|',
+        '@|page4-101.png|',
+        '@|page10-108.png|',
+        '@|page5-101.png|',
+        '@|311.png|',
+        '@|page10-106.png|',
+        '@|86.png|',
+        '@|301.png|',
+        '@|page10-107.png|',
+        '@|page9-41.png|',
+        '@|page1-text.png|',
+        '@|289.png|',
+        '@|page6-100.png|',
+        '@|88.png|',
+        '@|87.png|',
+        '@|page6-98.png|',
+        '@|page6-99.png|',
+        '@|page7-51.png|',
+        '@|97.png|',
+        '@|96.png|',
+        '@|page7-47.png|',
+        '@|101.png|',
+        '@|page7-49.png|',
+        '@|page5-113.png|',
+        '@|page5-112.png|',
+        '@|56.png|',
+        '@|page5-109.png|',
+        '@|page10-104.png|',
+        '@|page10-105.png|',
+        '@|page9-42.png|',
+        '@|loading.png|',
+        '@|page6-47.png|',
+        '@|page6-48.png|',
+        '@|17.png|'
       ]
     },
     show: function () {
@@ -19,12 +75,31 @@
       const numBar = owo.query('.num-bar')[0]
       this.preloadImages(this.data.imgList, (e) => {
         setTimeout(() => {
-          owo.go('page1')
-        }, 500)
+          owo.go('page1//fade/moveFromRight/true/fade/moveFromLeft')
+        }, 1000)
       }, (num) => {
-        numBar.style.width = num + '%'
-        mum.innerHTML = num + '%'
+        // numBar.style.width = num + '%'
+        // mum.innerHTML = num + '%'
       })
+      let index = 0
+      function lodaing() {
+        console.log('更换')
+        const loadingBg = owo.query('.loading-bg')[0]
+        if (index == 0) {
+          index = 1
+          loadingBg.src = "@|loading-bg-2.png|"
+          
+        } else {
+          index = 0
+          loadingBg.src = "@|loading-bg.png|"
+        }
+        setTimeout(() => {
+          if (owo.activePage == 'loading') {
+            lodaing()
+          }
+        }, 1500);
+      }
+      lodaing()
     },
     preloadImage: function (src, successFn) {
       var image = new Image()
@@ -61,15 +136,15 @@
 .loading-box {
   width: 100%;
   height: 100%;
-  background-image: url('https://cunchu.site/ozzx/resource/lanse.jpg');
 }
 .loading {
   position: absolute;
   left: 0;
   right: 0;
-  top: -16%;
+  top: -26%;
   bottom: 0;
   margin: auto;
+  z-index: 99;
 }
 .loading-bar {
   position: absolute;
@@ -107,5 +182,12 @@
 }
 .text {
   bottom: -14%;
-} 
+}
+.loading-bg {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transition: opacity 2s;
+}
 </style>

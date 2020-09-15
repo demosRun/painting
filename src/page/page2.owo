@@ -7,15 +7,22 @@
     span.so.so-4 安徽
     span.so.so-5 陕西
     span.so.so-6 山东
-    img.so.so-7(src="@|255.png|")
-    img.so.so-8(src="@|269.png|")
-    img.so.so-9(src="@|281.png|")
-    img.so.so-10(src="@|289.png|")
-    img.so.so-11(src="@|301.png|")
-    img.so.so-12(src="@|311.png|")
+    img.so.so-7(src="@|255.png|" o-animation="shrink" o-tap="next('贵州')")
+    img.so.so-8(src="@|269.png|" o-animation="shrink" o-tap="next('陕西')")
+    img.so.so-9(src="@|281.png|" o-animation="shrink" o-tap="next('安徽')")
+    img.so.so-10(src="@|289.png|" o-animation="shrink" o-tap="next('山东')")
+    img.so.so-11(src="@|301.png|" o-animation="shrink" o-tap="next('山西')")
+    img.so.so-12(src="@|311.png|" o-animation="shrink" o-tap="next('新疆')")
 </template>
 <script>
 module.exports = {
+  created: function () {
+    owo.tool.toast('请选择您的“上任”地区')
+  },
+  next: function (name) {
+    owo.state.place = name
+    owo.go('page10//fade/moveFromRight/true/fade/moveFromLeft')
+  }
 }
 </script>
 <style lang="less">

@@ -4,25 +4,36 @@
     img.so.so-2(src="@|56.png|")
     img.so.so-3(src="@|12.png|")
     //- 输入框
-    input.so.so-1(type="text")
+    input.so.so-1(type="text" o-animation="flicker")
   //- 背景
   img.so.so-4(src="@|57.png|")
   //- 点击下一步的文字
-  .text-box 胡汉三
+  .text-box
+    span 胡汉三
   .button(o-tap="next") 下一步
 </template>
 
 <script>
   module.exports = {
     created: function () {
-      owo.animate('fadeInUpBig', this.query('.so-3'))
+      owo.animate('fadeIn', this.query('.so-3'), 1000)
+      owo.tool.toast('请在横线上输入你的名字!', {
+        time: 5000
+      })
     },
     next: function () {
-      this.$el.classList.add('next')
-      this.$target.style.display = 'none'
-      setTimeout(() => {
-        owo.go('page2')
-      }, 3000);
+      const name = this.query('.so-1').value
+      if (name) {
+        owo.state.name = name
+        this.query('.text-box span').innerText = name
+        this.$el.classList.add('next')
+        this.$target.style.display = 'none'
+        setTimeout(() => {
+          owo.go('page2//fade/moveFromRight/true/fade/moveFromLeft')
+        }, 4000);
+      } else {
+        owo.tool.toast('您还未填写名字!')
+      }
     }
   }
 </script>
@@ -45,26 +56,30 @@
 }
 .so-1 {
   left: 193px;
-  top: 524px;
+  top: 510px;
   z-index: 2;
   background-image: url('@|17.png|');
-  height: 50px;
-  line-height: 50px;
+  height: 70px;
+  line-height: 70px;
   background-repeat: no-repeat;
   background-position: bottom;
   border: none;
   background-color: transparent;
   outline: none;
-  font-size: 25px;
+  font-size: 31px;
   width: 180px;
 }
 .so-2 {
   left: 187px;
   top: 477px;
+  user-select:  none;
+  pointer-events: none;
 }
 .so-3 {
   left: 0px;
   top: 467px;
+  user-select:  none;
+  pointer-events: none;
 }
 .so-4 {
   left: 35px;
@@ -89,6 +104,8 @@
   width: 502px;
   height: 291px;
   transition: opacity 2s;
+  user-select:  none;
+  pointer-events: none;
 }
 .text-box {
   position: absolute;
@@ -98,5 +115,15 @@
   top: -80px;
   margin: auto;
   opacity: 0;
+  span {
+    font-size: 30px;
+    position: absolute;
+    bottom: 50px;
+    width: 165px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+  }
 }
 </style>
