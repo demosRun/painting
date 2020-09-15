@@ -3,7 +3,7 @@
   .so.so-0
     img.so.so-1(src="@|96.png|")
     .so.so-2
-      img.so.so-3(src="@|98.png|")
+      img.so.so-3(src="@|test.gif|")
       img.so.so-4(src="@|97.png|" o-tap="next('page4')")
     .so.so-5
       img.so.so-6(src="@|99.png|")
