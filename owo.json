@@ -90,6 +90,11 @@
 			"name": "toast",
 			"afterbody": true,
 			"src": "./owo_modules/toast.js"
+		},
+		{
+			"name": "typing",
+			"afterbody": true,
+			"src": "./owo_modules/typing.js"
 		}
 	],
 	"styleList": [

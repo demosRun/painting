@@ -1,9 +1,17 @@
 <template lang="pug">
 .page11
   img.bg(src="@|page11.jpg|")
+  h2 你的名字：我既做了扶贫 扶贫也成就了我
+  p
+
 </template>
 <script>
 module.exports = {
+  created: function () {
+    this.query('h2').innerHTML = `${owo.state.name}：我既做了扶贫 扶贫也成就了我`
+    this.query('p').innerHTML = `&emsp;&emsp;${owo.state.name}于2019年来到第二页地区的贫困村，经过${owo.state.text1}后，了解到当地产业转型升级迫在眉睫,还有27户88人未能脱贫。为了带领村民脱贫，你的名字从${owo.state.text2}入手，逐渐找到了致富方向。经过一年的努力，你的名字带领村民们${owo.state.text3}。<br>&emsp;&emsp;投入扶贫事业，将一腔热血铺陈在一线工作上，${owo.state.name}的工作逐渐得到了村民们的认可。为了达到脱贫不返贫，带领村民脱贫攻坚，你的名字还${owo.state.text4}。<br>&emsp;&emsp;2020年是全面建成小康社会目标实现之年，是全面打赢脱贫攻坚战的收官之年。久久为功，在任期结束前，${owo.state.name}还准备${owo.state.text5}，从而带领村民朝着脱贫不返贫的方向迈进。<br>&emsp;&emsp;与全国280多万扶贫驻村干部一样，你的名字用实际行动彰显责任使命，用脚步丈量祖国的土地，用扶贫充实着自己的人生。`
+    // owo.tool.typing(this.query('p'), )
+  }
 }
 </script>
 <style lang="less">
@@ -14,5 +22,24 @@ module.exports = {
   right: 0;
   bottom: 0;
   margin: auto;
+}
+h2 {
+  position: absolute;
+  left: 75px;
+  top: 337px;
+  font-size: 24px;
+  color: #3e3123;
+  line-height: 30px;
+}
+p {
+  position: absolute;
+  top: 380px;
+  width: 600px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 22px;
+  line-height: 32px;
+  color: #3e3123;
 }
 </style>

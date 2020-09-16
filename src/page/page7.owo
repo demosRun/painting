@@ -2,13 +2,14 @@
 .page7
   .so.so-0
     img.so.so-1(src="@|page7-53.png|")
-    img.so.so-2(src="@|page7-51.png|" o-tap="next")
-    img.so.so-3(src="@|page7-49.png|" o-tap="next")
+    img.so.so-2(src="@|page7-51.png|" o-tap="next('亲自担任了村里的农产品代言人，参与直播带货，推动农产品销售，增加了村民们的收入。')")
+    img.so.so-3(src="@|page7-49.png|" o-tap="next('为村里的农产品注册了品牌，成立了推广协会，进一步为村里打造“明星产品”')")
     img.so.so-4(src="@|page7-47.png|")
 </template>
 <script>
 module.exports = {
-  next: function (name) {
+  next: function (text) {
+    owo.state.text4 = text
     owo.go('page8//fade/moveFromRight/true/fade/moveFromLeft')
   }
 }

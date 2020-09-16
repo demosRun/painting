@@ -760,8 +760,8 @@ li {
 }
 
 .page10 .car-ani {
-  -webkit-animation: car 8s 1 0s linear;
-          animation: car 8s 1 0s linear;
+  -webkit-animation: car 6s 1 0s linear;
+          animation: car 6s 1 0s linear;
 }
 .page11 .bg {
   position: absolute;
@@ -770,6 +770,27 @@ li {
   right: 0;
   bottom: 0;
   margin: auto;
+}
+
+.page11 h2 {
+  position: absolute;
+  left: 75px;
+  top: 337px;
+  font-size: 24px;
+  color: #3e3123;
+  line-height: 30px;
+}
+
+.page11 p {
+  position: absolute;
+  top: 380px;
+  width: 600px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 22px;
+  line-height: 32px;
+  color: #3e3123;
 }
 /* 页面切换动画 */
 .o-page-fade {
