@@ -3,10 +3,10 @@
   .so.so-0
     img.so.so-1(src="@|96.png|")
     .so.so-2
-      img.so.so-3(src="@|98.png|")
+      img.so.so-3(src="@|98.gif|")
       img.so.so-4(src="@|97.png|" o-tap="next('到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。')")
     .so.so-5
-      img.so.so-6(src="@|99.png|")
+      img.so.so-6(src="@|99.gif|")
       img.so.so-7(src="@|101.png|" o-tap="next('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')")
 </template>
 <script>

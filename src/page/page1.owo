@@ -10,7 +10,7 @@
   //- 点击下一步的文字
   .text-box
     span 胡汉三
-  .button(o-tap="next") 下一步
+  img.button(src="@|next.png|" o-tap="next")
 </template>
 
 <script>
@@ -88,16 +88,13 @@
 }
 .button {
   position: absolute;
-  width: 200px;
-  height: 90px;
   line-height: 90px;
   font-size: 30px;
   text-align: center;
-  background-color: goldenrod;
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 10%;
+  bottom: 15%;
 }
 .text-box {
   background-image: url('@|page1-text.png|');

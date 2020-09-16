@@ -1,7 +1,7 @@
 <template lang="pug">
 .page4
   .so.so-0
-    img.so.so-1(src="@|page4-100.png|")
+    img.so.so-1(src="@|page4-100.gif|")
     img.so.so-2(src="@|page4-99.png|")
     img.so.so-3(src="@|page4-101.png|")
 </template>
@@ -11,7 +11,7 @@ module.exports = {
     owo.animate('fadeInDown', this.query('.so-3'))
     setTimeout(() => {
       owo.go('page5//fade/moveFromRight/true/fade/moveFromLeft')
-    }, 3000);
+    }, 4000);
   }
 }
 </script>

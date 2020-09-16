@@ -201,16 +201,13 @@ li {
 
 .page-1 .button {
   position: absolute;
-  width: 200px;
-  height: 90px;
   line-height: 90px;
   font-size: 30px;
   text-align: center;
-  background-color: goldenrod;
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 10%;
+  bottom: 15%;
 }
 
 .page-1 .text-box {
