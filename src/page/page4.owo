@@ -11,7 +11,7 @@ module.exports = {
     owo.animate('fadeInDown', this.query('.so-3'))
     setTimeout(() => {
       owo.go('page5//fade/moveFromRight/true/fade/moveFromLeft')
-    }, 4000);
+    }, 5000);
   }
 }
 </script>
