@@ -22,7 +22,7 @@ module.exports = {
     owo.animate('fadeIn', this.query('.text'), 2800)
     setTimeout(() => {
       owo.go('page3//fade/moveFromRight/true/fade/moveFromLeft')
-    }, 7000);
+    }, 5000);
   }
 }
 </script>
@@ -95,6 +95,6 @@ module.exports = {
 }
 
 .car-ani {
-    animation: car 6s 1 0s linear;
+    animation: car 4s 1 0s linear;
 }
 </style>

@@ -1,243 +1,384 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <!-- 页面的元信息 -->
-    <title>{TAG_14226_TAG}</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="filetype" content="1"/>
-    <meta name="publishedtype" content="1"/>
-    <meta name="pagetype" content="2"/>
-    <meta name="screen-orientation" content="landscape"/>
-    <meta name="x5-orientation" content="landscape"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="browsermode" content="application"/>
-    <meta name="x5-page-mode" content="app"/>
-    
-      <!-- 页面主样式文件 -->
-      <link charset="utf-8"  rel="stylesheet" href="./static/css/owo.core.css">
-      
-    <!-- 附属css文件 -->
-    <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-      
-  </head>
-  <body>
-    <div class="scale-box">
+
+<head>
+  <!-- 页面的元信息 -->
+  <title>{TAG_14226_TAG}</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.css">
+
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+
+</head>
+
+<body>
+  <div class="scale-box">
     <!-- 页面[loading]-->
-    <div class="loading-box page" template="loading" style="display: none;"><img class="loading" src="./static/resource/loading.png" o-animation="flicker"><img class="loading-bg" src="./static/resource/loading-bg.png"></div>
+    <div class="loading-box page" template="loading" style="display: none;">
+      <img class="loading" src="./static/resource/loading.png" o-animation="flicker">
+      <img class="loading-bg" src="./static/resource/loading-bg.png">
+    </div>
     <!-- 页面[page1]-->
-    <div class="page-1 page" template="page1" style="display: none;"><div class="so so-0"><img class="so so-2" src="./static/resource/56.png"><img class="so so-3" src="./static/resource/12.png"><input class="so so-1" type="text" o-animation="flicker"></div><img class="so so-4" src="./static/resource/57.png"><div class="text-box"><span>胡汉三</span></div><img class="button" src="./static/resource/next.png" o-tap="next"></div>
+    <div class="page-1 page" template="page1" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-2" src="./static/resource/56.png">
+        <img class="so so-3" src="./static/resource/12.png">
+        <input class="so so-1" type="text" o-animation="flicker">
+      </div>
+      <img class="so so-4" src="./static/resource/57.png">
+      <div class="text-box">
+        <span>胡汉三</span>
+      </div>
+      <img class="button" src="./static/resource/next.png" o-tap="next">
+    </div>
     <!-- 页面[page2]-->
-    <div class="page2 page" template="page2" style="display: none;"><div class="so so-0"><span class="so so-1">贵州</span><span class="so so-2">山西</span><span class="so so-3">新疆</span><span class="so so-4">安徽</span><span class="so so-5">陕西</span><span class="so so-6">山东</span><img class="so so-7" src="./static/resource/255.png" o-animation="shrink" o-tap="next('贵州')"><img class="so so-8" src="./static/resource/269.png" o-animation="shrink" o-tap="next('陕西')"><img class="so so-9" src="./static/resource/281.png" o-animation="shrink" o-tap="next('安徽')"><img class="so so-10" src="./static/resource/289.png" o-animation="shrink" o-tap="next('山东')"><img class="so so-11" src="./static/resource/301.png" o-animation="shrink" o-tap="next('山西')"><img class="so so-12" src="./static/resource/311.png" o-animation="shrink" o-tap="next('新疆')"></div></div>
+    <div class="page2 page" template="page2" style="display: none;">
+      <div class="so so-0">
+        <span class="so so-1">贵州</span>
+        <span class="so so-2">山西</span>
+        <span class="so so-3">新疆</span>
+        <span class="so so-4">安徽</span>
+        <span class="so so-5">陕西</span>
+        <span class="so so-6">山东</span>
+        <img class="so so-7" src="./static/resource/255.png" o-animation="shrink" o-tap="next('贵州')">
+        <img class="so so-8" src="./static/resource/269.png" o-animation="shrink" o-tap="next('陕西')">
+        <img class="so so-9" src="./static/resource/281.png" o-animation="shrink" o-tap="next('安徽')">
+        <img class="so so-10" src="./static/resource/289.png" o-animation="shrink" o-tap="next('山东')">
+        <img class="so so-11" src="./static/resource/301.png" o-animation="shrink" o-tap="next('山西')">
+        <img class="so so-12" src="./static/resource/311.png" o-animation="shrink" o-tap="next('新疆')">
+      </div>
+    </div>
     <!-- 页面[page3]-->
-    <div class="page3 page" template="page3" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/96.png"><div class="so so-2"><img class="so so-3" src="./static/resource/98.png"><img class="so so-4" src="./static/resource/97.png" o-tap="next('到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。')" o-animation="shrink"></div><div class="so so-5"><img class="so so-6" src="./static/resource/99.png"><img class="so so-7" src="./static/resource/101.png" o-tap="next('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')" o-animation="shrink"></div></div></div>
+    <div class="page3 page" template="page3" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/96.png">
+        <div class="so so-2">
+          <img class="so so-3" src="./static/resource/98.png" o-tap="next1('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')">
+          <img class="so so-4" src="./static/resource/97.png" o-tap="next1('到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。')" o-animation="shrink">
+        </div>
+        <div class="so so-5">
+          <img class="so so-6" src="./static/resource/99.png" o-tap="next2('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')">
+          <img class="so so-7" src="./static/resource/101.png" o-tap="next2('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')" o-animation="shrink">
+        </div>
+      </div>
+    </div>
     <!-- 页面[page4]-->
-    <div class="page4 page" template="page4" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/page4-100.gif"><img class="so so-2" src="./static/resource/page4-99.png"><img class="so so-3" src="./static/resource/page4-101.png"></div></div>
+    <div class="page4 page" template="page4" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/page4-100.gif">
+        <img class="so so-2" src="./static/resource/page4-99.png">
+        <img class="so so-3" src="./static/resource/page4-101.png">
+      </div>
+    </div>
     <!-- 页面[page5]-->
-    <div class="page5 page" template="page5" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/page5-100.png"><img class="so so-2" src="./static/resource/page5-101.png"><img class="so so-3" src="./static/resource/page5-107.png"><img class="so so-4" src="./static/resource/page5-108.png"><img class="so so-5" src="./static/resource/page5-109.png" o-tap="next('建设现代产业园，打造光伏发电基地。')"><img class="so so-6" src="./static/resource/page5-112.png" o-tap="next('搭建优质农产品推广平台，助力农业生产转型升级。')"><img class="so so-7" src="./static/resource/page5-113.png"></div></div>
+    <div class="page5 page" template="page5" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1 ani1" src="./static/resource/page5-100.png">
+        <img class="so so-2" src="./static/resource/page5-101.png">
+        <img class="so so-3" src="./static/resource/page5-107.png">
+        <img class="so so-4" src="./static/resource/page5-108.png">
+        <img class="so so-5" src="./static/resource/page5-109.png" o-tap="next('建设现代产业园，打造光伏发电基地。')" o-animation="shrink">
+        <img class="so so-6" src="./static/resource/page5-112.png" o-tap="next('搭建优质农产品推广平台，助力农业生产转型升级。')" o-animation="shrink">
+        <img class="so so-7" src="./static/resource/page5-113.png">
+      </div>
+    </div>
     <!-- 页面[page6]-->
-    <div class="page6 page" template="page6" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/page6-97.png"><img class="so so-2" src="./static/resource/page6-98.png" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')"><img class="so so-3" src="./static/resource/page6-99.png" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')"><img class="so so-4" src="./static/resource/page6-100.png"><img class="so so-7" src="./static/resource/page6-106.png"><img class="so so-8" src="./static/resource/page6-105.png"></div></div>
+    <div class="page6 page" template="page6" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/page6-97.gif">
+        <img class="so so-2" src="./static/resource/page6-98.png" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')" o-animation="shrink">
+        <img class="so so-3" src="./static/resource/page6-99.png" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')" o-animation="shrink">
+        <img class="so so-4" src="./static/resource/page6-100.png">
+        <img class="so so-7" src="./static/resource/page6-106.png">
+        <img class="so so-8" src="./static/resource/page6-105.png">
+      </div>
+    </div>
     <!-- 页面[page7]-->
-    <div class="page7 page" template="page7" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/page7-53.png"><img class="so so-2" src="./static/resource/page7-51.png" o-tap="next('亲自担任了村里的农产品代言人，参与直播带货，推动农产品销售，增加了村民们的收入。')"><img class="so so-3" src="./static/resource/page7-49.png" o-tap="next('为村里的农产品注册了品牌，成立了推广协会，进一步为村里打造“明星产品”')"><img class="so so-4" src="./static/resource/page7-47.png"></div></div>
+    <div class="page7 page" template="page7" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/page7-53.gif">
+        <img class="so so-2" src="./static/resource/page7-51.png" o-tap="next('亲自担任了村里的农产品代言人，参与直播带货，推动农产品销售，增加了村民们的收入。')" o-animation="shrink">
+        <img class="so so-3" src="./static/resource/page7-49.png" o-tap="next('为村里的农产品注册了品牌，成立了推广协会，进一步为村里打造“明星产品”。')" o-animation="shrink">
+        <img class="so so-4" src="./static/resource/page7-47.png">
+      </div>
+    </div>
     <!-- 页面[page8]-->
-    <div class="page8 page" template="page8" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/88.png" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')"><img class="so so-2" src="./static/resource/87.png" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')"><img class="so so-3" src="./static/resource/86.png"><img class="so so-4" src="./static/resource/95.png"><img class="so so-5" src="./static/resource/94.png"><img class="so so-6" src="./static/resource/93.png"><img class="so so-7" src="./static/resource/92.png"></div></div>
+    <div class="page8 page" template="page8" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/88.png" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')" o-animation="shrink">
+        <img class="so so-2" src="./static/resource/87.png" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')" o-animation="shrink">
+        <img class="so so-3" src="./static/resource/86.png">
+        <img class="so so-4" src="./static/resource/95.png">
+        <img class="so so-5" src="./static/resource/94.png">
+        <img class="so so-6" src="./static/resource/93.png">
+        <img class="so so-7" src="./static/resource/92.png">
+      </div>
+    </div>
     <!-- 页面[page9]-->
-    <div class="page9 page" template="page9" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/page9-32.png"><img class="so so-2" src="./static/resource/page9-42.png" o-tap="next" o-animation="shrink"><img class="so so-3" src="./static/resource/page9-41.png"></div></div>
+    <div class="page9 page" template="page9" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/page9-32.png">
+        <img class="so so-2" src="./static/resource/page9-42.png" o-tap="next" o-animation="shrink">
+        <img class="so so-3" src="./static/resource/page9-41.png">
+      </div>
+    </div>
     <!-- 页面[page10]-->
-    <div class="page10 page" template="page10" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/page10-112.png"><img class="so so-2" src="./static/resource/page10-111.png"><img class="so so-3 car-ani" src="./static/resource/page10-108.png"><img class="so so-4" src="./static/resource/page10-107.png"><img class="so so-6" src="./static/resource/page10-105.png"><img class="so so-7" src="./static/resource/page10-104.png"><div class="text">辗转几个小时车程后，你终于来到了位于（河北/山东/山西/陕西/贵州/安徽/新疆）的贫困村。</div></div></div>
+    <div class="page10 page" template="page10" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/page10-112.png">
+        <img class="so so-2" src="./static/resource/page10-111.png">
+        <img class="so so-3 car-ani" src="./static/resource/page10-108.png">
+        <img class="so so-4" src="./static/resource/page10-107.png">
+        <img class="so so-6" src="./static/resource/page10-105.png">
+        <img class="so so-7" src="./static/resource/page10-104.png">
+        <div class="text">辗转几个小时车程后，你终于来到了位于（河北/山东/山西/陕西/贵州/安徽/新疆）的贫困村。</div>
+      </div>
+    </div>
     <!-- 页面[page11]-->
-    <div class="page11 page" template="page11" style="display: none;"><img class="bg" src="./static/resource/page11.jpg"><h2>你的名字：我既做了扶贫 扶贫也成就了我</h2><p></p></div></div>
-    
+    <div class="page11 page" template="page11" style="display: none;">
+      <img class="bg" src="./static/resource/page11.jpg">
+      <h2></h2>
+      <p></p>
+      <img class="show-image">
+    </div>
+  </div>
 
-    <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript"  charset="UTF-8"></script>
-<!-- 框架script文件 -->
-<script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-owo.script = {
-  "loading": {
-    "data": {
-      "imgList": ["./static/resource/58.jpg", "./static/resource/loading-bg-2.png", "./static/resource/page11.jpg", "./static/resource/57.png", "./static/resource/page4-100.png", "./static/resource/page7-53.png", "./static/resource/loading-bg.png", "./static/resource/page6-105.png", "./static/resource/12.png", "./static/resource/page6-106.png", "./static/resource/99.png", "./static/resource/98.png", "./static/resource/page5-107.png", "./static/resource/page9-32.png", "./static/resource/page4-99.png", "./static/resource/page5-100.png", "./static/resource/page6-97.png", "./static/resource/94.png", "./static/resource/page10-112.png", "./static/resource/255.png", "./static/resource/269.png", "./static/resource/page10-111.png", "./static/resource/281.png", "./static/resource/page5-108.png", "./static/resource/95.png", "./static/resource/92.png", "./static/resource/93.png", "./static/resource/page4-101.png", "./static/resource/page10-108.png", "./static/resource/page5-101.png", "./static/resource/311.png", "./static/resource/page10-106.png", "./static/resource/86.png", "./static/resource/301.png", "./static/resource/page10-107.png", "./static/resource/page9-41.png", "./static/resource/page1-text.png", "./static/resource/289.png", "./static/resource/page6-100.png", "./static/resource/88.png", "./static/resource/87.png", "./static/resource/page6-98.png", "./static/resource/page6-99.png", "./static/resource/page7-51.png", "./static/resource/97.png", "./static/resource/96.png", "./static/resource/page7-47.png", "./static/resource/101.png", "./static/resource/page7-49.png", "./static/resource/page5-113.png", "./static/resource/page5-112.png", "./static/resource/56.png", "./static/resource/page5-109.png", "./static/resource/page10-104.png", "./static/resource/page10-105.png", "./static/resource/page9-42.png", "./static/resource/loading.png", "./static/resource/page6-47.png", "./static/resource/page6-48.png", "./static/resource/17.png"]
-    },
-    "show": function show() {
-      var mum = owo.query('.num')[0];
-      var numBar = owo.query('.num-bar')[0];
-      this.preloadImages(this.data.imgList, function (e) {
-        setTimeout(function () {
-          owo.go('page1//fade/moveFromRight/true/fade/moveFromLeft');
-        }, 1000);
-      }, function (num) {// numBar.style.width = num + '%'
-        // mum.innerHTML = num + '%'
-      });
-      var index = 0;
 
-      function lodaing() {
-        console.log('更换');
-        var loadingBg = owo.query('.loading-bg')[0];
-
-        if (index == 0) {
-          index = 1;
-          loadingBg.src = "./static/resource/loading-bg-2.png";
-        } else {
-          index = 0;
-          loadingBg.src = "./static/resource/loading-bg.png";
-        }
-
-        setTimeout(function () {
-          if (owo.activePage == 'loading') {
-            lodaing();
-          }
-        }, 1500);
-      }
-
-      lodaing();
-    },
-    "preloadImage": function preloadImage(src, successFn) {
-      var image = new Image();
-      image.src = src;
-
-      image.onload = function () {
-        successFn && successFn(src);
-      };
-
-      image.onerror = function (error) {
-        successFn && successFn(src);
-      };
-    },
-    "preloadImages": function preloadImages(srcs, doneFn, progressFn) {
-      var _this = this;
-
-      if (!Array.isArray(srcs)) {
-        console.log('第一个参数只能是一个数组');
-      } else {
-        var allCount = srcs.length;
-        var doneCount = 0;
-        srcs.forEach(function (srcItem) {
-          _this.preloadImage(srcItem, function () {
-            doneCount++;
-            progressFn && progressFn(Math.ceil(100 * doneCount / allCount));
-
-            if (doneCount === allCount) {
-              doneFn && doneFn();
-            }
+  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/html2canvas.js" type="text/javascript" charset="UTF-8"></script>
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    owo.script = {
+      "loading": {
+        "data": {
+          "imgList": ["./static/resource/58.jpg", "./static/resource/loading-bg-2.png", "./static/resource/page11.jpg", "./static/resource/57.png", "./static/resource/page4-100.png", "./static/resource/page7-53.png", "./static/resource/loading-bg.png", "./static/resource/page6-105.png", "./static/resource/12.png", "./static/resource/page6-106.png", "./static/resource/99.png", "./static/resource/98.png", "./static/resource/page5-107.png", "./static/resource/page9-32.png", "./static/resource/page4-99.png", "./static/resource/page5-100.png", "./static/resource/page6-97.png", "./static/resource/94.png", "./static/resource/page10-112.png", "./static/resource/255.png", "./static/resource/269.png", "./static/resource/page10-111.png", "./static/resource/281.png", "./static/resource/page5-108.png", "./static/resource/95.png", "./static/resource/92.png", "./static/resource/93.png", "./static/resource/page4-101.png", "./static/resource/page10-108.png", "./static/resource/page5-101.png", "./static/resource/311.png", "./static/resource/page10-106.png", "./static/resource/86.png", "./static/resource/301.png", "./static/resource/page10-107.png", "./static/resource/page9-41.png", "./static/resource/page1-text.png", "./static/resource/289.png", "./static/resource/page6-100.png", "./static/resource/88.png", "./static/resource/87.png", "./static/resource/page6-98.png", "./static/resource/page6-99.png", "./static/resource/page7-51.png", "./static/resource/97.png", "./static/resource/96.png", "./static/resource/page7-47.png", "./static/resource/101.png", "./static/resource/page7-49.png", "./static/resource/page5-113.png", "./static/resource/page5-112.png", "./static/resource/56.png", "./static/resource/page5-109.png", "./static/resource/page10-104.png", "./static/resource/page10-105.png", "./static/resource/page9-42.png", "./static/resource/loading.png", "./static/resource/page6-47.png", "./static/resource/page6-48.png", "./static/resource/17.png"]
+        },
+        "show": function show() {
+          var mum = owo.query('.num')[0];
+          var numBar = owo.query('.num-bar')[0];
+          this.preloadImages(this.data.imgList, function(e) {
+            setTimeout(function() {
+              owo.go('page1//fade/moveFromRight/true/fade/moveFromLeft');
+            }, 1000);
+          }, function(num) { // numBar.style.width = num + '%'
+            // mum.innerHTML = num + '%'
           });
-        });
-      }
-    }
-  },
-  "page1": {
-    "created": function created() {
-      owo.animate('fadeIn', this.query('.so-3'), 1000);
-      owo.tool.toast('请在横线上输入你的名字!', {
-        time: 5000
-      });
-    },
-    "next": function next() {
-      var name = this.query('.so-1').value;
+          var index = 0;
 
-      if (name) {
-        owo.state.name = name;
-        this.query('.text-box span').innerText = name;
-        this.$el.classList.add('next');
-        this.$target.style.display = 'none';
-        setTimeout(function () {
-          owo.go('page2//fade/moveFromRight/true/fade/moveFromLeft');
-        }, 4000);
-      } else {
-        owo.tool.toast('您还未填写名字!');
-      }
-    }
-  },
-  "page2": {
-    "created": function created() {
-      owo.tool.toast('请选择您的“上任”地区');
-    },
-    "next": function next(name) {
-      owo.state.place = name;
-      owo.go('page10//fade/moveFromRight/true/fade/moveFromLeft');
-    }
-  },
-  "page3": {
-    "created": function created() {
-      owo.animate('fadeInDown', this.query('.so-1'));
-      owo.animate('fadeInLeft', this.query('.so-3'), 1000);
-      owo.animate('fadeInRight', this.query('.so-6'), 2000);
-    },
-    "next": function next(text) {
-      owo.state.text1 = text;
-      owo.go('page4//fade/moveFromRight/true/fade/moveFromLeft');
-    }
-  },
-  "page4": {
-    "created": function created() {
-      owo.animate('fadeInDown', this.query('.so-3'));
-      setTimeout(function () {
-        owo.go('page5//fade/moveFromRight/true/fade/moveFromLeft');
-      }, 5000);
-    }
-  },
-  "page5": {
-    "next": function next(text) {
-      owo.state.text2 = text;
-      owo.go('page6//fade/moveFromRight/true/fade/moveFromLeft');
-    }
-  },
-  "page6": {
-    "next": function next(text) {
-      owo.state.text3 = text;
-      owo.go('page7//fade/moveFromRight/true/fade/moveFromLeft');
-    }
-  },
-  "page7": {
-    "next": function next(text) {
-      owo.state.text4 = text;
-      owo.go('page8//fade/moveFromRight/true/fade/moveFromLeft');
-    }
-  },
-  "page8": {
-    "next": function next(text) {
-      owo.state.text5 = text;
-      owo.go('page9//fade/moveFromRight/true/fade/moveFromLeft');
-    }
-  },
-  "page9": {
-    "created": function created() {
-      owo.animate('fadeInRight', this.query('.so-1'));
-    },
-    "next": function next(name) {
-      owo.go('page11//fade/moveFromRight/true/fade/moveFromLeft');
-    }
-  },
-  "page10": {
-    "created": function created() {
-      owo.state.place = owo.state.place || '陕西';
-      this.query('.text').innerText = "\u8F97\u8F6C\u51E0\u4E2A\u5C0F\u65F6\u8F66\u7A0B\u540E\uFF0C\u4F60\u7EC8\u4E8E\u6765\u5230\u4E86\u4F4D\u4E8E" + owo.state.place + "\u7684\u8D2B\u56F0\u6751\u3002";
-      owo.animate('rotateInDownLeft', this.query('.so-2'));
-      owo.animate('lightSpeedIn', this.query('.so-4'), 800);
-      owo.animate('lightSpeedIn', this.query('.so-4'), 1400);
-      owo.animate('fadeIn', this.query('.text'), 2800);
-      setTimeout(function () {
-        owo.go('page3//fade/moveFromRight/true/fade/moveFromLeft');
-      }, 7000);
-    }
-  },
-  "page11": {
-    "created": function created() {
-      this.query('h2').innerHTML = owo.state.name + "\uFF1A\u6211\u65E2\u505A\u4E86\u6276\u8D2B \u6276\u8D2B\u4E5F\u6210\u5C31\u4E86\u6211";
-      this.query('p').innerHTML = "&emsp;&emsp;" + owo.state.name + "\u4E8E2019\u5E74\u6765\u5230\u7B2C\u4E8C\u9875\u5730\u533A\u7684\u8D2B\u56F0\u6751\uFF0C\u7ECF\u8FC7" + owo.state.text1 + "\u540E\uFF0C\u4E86\u89E3\u5230\u5F53\u5730\u4EA7\u4E1A\u8F6C\u578B\u5347\u7EA7\u8FEB\u5728\u7709\u776B,\u8FD8\u670927\u623788\u4EBA\u672A\u80FD\u8131\u8D2B\u3002\u4E3A\u4E86\u5E26\u9886\u6751\u6C11\u8131\u8D2B\uFF0C\u4F60\u7684\u540D\u5B57\u4ECE" + owo.state.text2 + "\u5165\u624B\uFF0C\u9010\u6E10\u627E\u5230\u4E86\u81F4\u5BCC\u65B9\u5411\u3002\u7ECF\u8FC7\u4E00\u5E74\u7684\u52AA\u529B\uFF0C\u4F60\u7684\u540D\u5B57\u5E26\u9886\u6751\u6C11\u4EEC" + owo.state.text3 + "\u3002<br>&emsp;&emsp;\u6295\u5165\u6276\u8D2B\u4E8B\u4E1A\uFF0C\u5C06\u4E00\u8154\u70ED\u8840\u94FA\u9648\u5728\u4E00\u7EBF\u5DE5\u4F5C\u4E0A\uFF0C" + owo.state.name + "\u7684\u5DE5\u4F5C\u9010\u6E10\u5F97\u5230\u4E86\u6751\u6C11\u4EEC\u7684\u8BA4\u53EF\u3002\u4E3A\u4E86\u8FBE\u5230\u8131\u8D2B\u4E0D\u8FD4\u8D2B\uFF0C\u5E26\u9886\u6751\u6C11\u8131\u8D2B\u653B\u575A\uFF0C\u4F60\u7684\u540D\u5B57\u8FD8" + owo.state.text4 + "\u3002<br>&emsp;&emsp;2020\u5E74\u662F\u5168\u9762\u5EFA\u6210\u5C0F\u5EB7\u793E\u4F1A\u76EE\u6807\u5B9E\u73B0\u4E4B\u5E74\uFF0C\u662F\u5168\u9762\u6253\u8D62\u8131\u8D2B\u653B\u575A\u6218\u7684\u6536\u5B98\u4E4B\u5E74\u3002\u4E45\u4E45\u4E3A\u529F\uFF0C\u5728\u4EFB\u671F\u7ED3\u675F\u524D\uFF0C" + owo.state.name + "\u8FD8\u51C6\u5907" + owo.state.text5 + "\uFF0C\u4ECE\u800C\u5E26\u9886\u6751\u6C11\u671D\u7740\u8131\u8D2B\u4E0D\u8FD4\u8D2B\u7684\u65B9\u5411\u8FC8\u8FDB\u3002<br>&emsp;&emsp;\u4E0E\u5168\u56FD280\u591A\u4E07\u6276\u8D2B\u9A7B\u6751\u5E72\u90E8\u4E00\u6837\uFF0C\u4F60\u7684\u540D\u5B57\u7528\u5B9E\u9645\u884C\u52A8\u5F70\u663E\u8D23\u4EFB\u4F7F\u547D\uFF0C\u7528\u811A\u6B65\u4E08\u91CF\u7956\u56FD\u7684\u571F\u5730\uFF0C\u7528\u6276\u8D2B\u5145\u5B9E\u7740\u81EA\u5DF1\u7684\u4EBA\u751F\u3002"; // owo.tool.typing(this.query('p'), )
-    }
-  }
-};
-</script>
+          function lodaing() {
+            console.log('更换');
+            var loadingBg = owo.query('.loading-bg')[0];
 
-    <script src="./static/js/toast.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/typing.js" type="text/javascript"  charset="UTF-8"></script>
-  </body>
+            if (index == 0) {
+              index = 1;
+              loadingBg.src = "./static/resource/loading-bg-2.png";
+            } else {
+              index = 0;
+              loadingBg.src = "./static/resource/loading-bg.png";
+            }
+
+            setTimeout(function() {
+              if (owo.activePage == 'loading') {
+                lodaing();
+              }
+            }, 1500);
+          }
+
+          lodaing();
+        },
+        "preloadImage": function preloadImage(src, successFn) {
+          var image = new Image();
+          image.src = src;
+
+          image.onload = function() {
+            successFn && successFn(src);
+          };
+
+          image.onerror = function(error) {
+            successFn && successFn(src);
+          };
+        },
+        "preloadImages": function preloadImages(srcs, doneFn, progressFn) {
+          var _this = this;
+
+          if (!Array.isArray(srcs)) {
+            console.log('第一个参数只能是一个数组');
+          } else {
+            var allCount = srcs.length;
+            var doneCount = 0;
+            srcs.forEach(function(srcItem) {
+              _this.preloadImage(srcItem, function() {
+                doneCount++;
+                progressFn && progressFn(Math.ceil(100 * doneCount / allCount));
+
+                if (doneCount === allCount) {
+                  doneFn && doneFn();
+                }
+              });
+            });
+          }
+        }
+      },
+      "page1": {
+        "created": function created() {
+          owo.animate('fadeIn', this.query('.so-3'), 1000);
+          owo.tool.toast('请在横线上输入你的名字!', {
+            time: 5000
+          });
+        },
+        "next": function next() {
+          var name = this.query('.so-1').value;
+
+          if (name) {
+            owo.state.name = name;
+            this.query('.text-box span').innerText = name;
+            this.$el.classList.add('next');
+            this.$target.style.display = 'none';
+            setTimeout(function() {
+              owo.go('page2//fade/moveFromRight/true/fade/moveFromLeft');
+            }, 4000);
+          } else {
+            owo.tool.toast('您还未填写名字!');
+          }
+        }
+      },
+      "page2": {
+        "created": function created() {
+          owo.tool.toast('请选择您的“上任”地区');
+        },
+        "next": function next(name) {
+          owo.state.place = name;
+          owo.go('page10//fade/moveFromRight/true/fade/moveFromLeft');
+        }
+      },
+      "page3": {
+        "created": function created() {
+          owo.animate('fadeInDown', this.query('.so-1'));
+          owo.animate('fadeInLeft', this.query('.so-3'), 1000);
+          owo.animate('fadeInRight', this.query('.so-6'), 2000);
+        },
+        "next1": function next1(text) {
+          owo.animate('bounceOutLeft', this.query('.so-7'));
+          owo.animate('bounceOutRight', this.query('.so-6'), 100);
+          owo.state.text1 = text;
+          setTimeout(function() {
+            owo.go('page4//fade/moveFromRight/true/fade/moveFromLeft');
+          }, 1000);
+        },
+        "next2": function next2(text) {
+          owo.animate('bounceOutLeft', this.query('.so-3'));
+          owo.animate('bounceOutRight', this.query('.so-4'), 100);
+          owo.state.text1 = text;
+          setTimeout(function() {
+            owo.go('page4//fade/moveFromRight/true/fade/moveFromLeft');
+          }, 1000);
+        }
+      },
+      "page4": {
+        "created": function created() {
+          owo.animate('fadeInDown', this.query('.so-3'));
+          setTimeout(function() {
+            owo.go('page5//fade/moveFromRight/true/fade/moveFromLeft');
+          }, 5000);
+        }
+      },
+      "page5": {
+        "next": function next(text) {
+          owo.state.text2 = text;
+          owo.go('page6//fade/moveFromRight/true/fade/moveFromLeft');
+        }
+      },
+      "page6": {
+        "created": function created() {
+          owo.animate('fadeIn', this.query('.so-7'));
+          owo.animate('fadeIn', this.query('.so-8'), 800);
+        },
+        "next": function next(text) {
+          owo.state.text3 = text;
+          owo.go('page7//fade/moveFromRight/true/fade/moveFromLeft');
+        }
+      },
+      "page7": {
+        "next": function next(text) {
+          owo.state.text4 = text;
+          owo.go('page8//fade/moveFromRight/true/fade/moveFromLeft');
+        }
+      },
+      "page8": {
+        "next": function next(text) {
+          owo.state.text5 = text;
+          owo.go('page9//fade/moveFromRight/true/fade/moveFromLeft');
+        }
+      },
+      "page9": {
+        "created": function created() {
+          owo.animate('fadeInRight', this.query('.so-1'));
+        },
+        "next": function next(name) {
+          owo.go('page11//fade/moveFromRight/true/fade/moveFromLeft');
+        }
+      },
+      "page10": {
+        "created": function created() {
+          owo.state.place = owo.state.place || '陕西';
+          this.query('.text').innerText = "\u8F97\u8F6C\u51E0\u4E2A\u5C0F\u65F6\u8F66\u7A0B\u540E\uFF0C\u4F60\u7EC8\u4E8E\u6765\u5230\u4E86\u4F4D\u4E8E" + owo.state.place + "\u7684\u8D2B\u56F0\u6751\u3002";
+          owo.animate('rotateInDownLeft', this.query('.so-2'));
+          owo.animate('lightSpeedIn', this.query('.so-4'), 800);
+          owo.animate('lightSpeedIn', this.query('.so-4'), 1400);
+          owo.animate('fadeIn', this.query('.text'), 2800);
+          setTimeout(function() {
+            owo.go('page3//fade/moveFromRight/true/fade/moveFromLeft');
+          }, 5000);
+        }
+      },
+      "page11": {
+        "created": function created() {
+          var _this2 = this;
+
+          // owo.state.name = '我'
+          // owo.state.place = "安徽"
+          // owo.state.text1 = "到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。"
+          // owo.state.text2 = "搭建优质农产品推广平台，助力农业生产转型升级。"
+          // owo.state.text3 = "与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。"
+          // owo.state.text4 = "为村里的农产品注册了品牌，成立了推广协会，进一步为村里打造“明星产品”"
+          // owo.state.text5 = "与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。"
+          this.query('h2').innerHTML = owo.state.name + "\uFF1A\u6211\u65E2\u505A\u4E86\u6276\u8D2B \u6276\u8D2B\u4E5F\u6210\u5C31\u4E86\u6211";
+          this.query('p').innerHTML = "&emsp;&emsp;" + owo.state.name + "\u4E8E2019\u5E74\u6765\u5230" + owo.state.place + "\u5730\u533A\u7684\u8D2B\u56F0\u6751\uFF0C\u7ECF\u8FC7" + owo.state.text1 + "\u540E\uFF0C\u4E86\u89E3\u5230\u5F53\u5730\u4EA7\u4E1A\u8F6C\u578B\u5347\u7EA7\u8FEB\u5728\u7709\u776B,\u8FD8\u670927\u623788\u4EBA\u672A\u80FD\u8131\u8D2B\u3002\u4E3A\u4E86\u5E26\u9886\u6751\u6C11\u8131\u8D2B\uFF0C" + owo.state.name + "\u4ECE" + owo.state.text2 + "\u5165\u624B\uFF0C\u9010\u6E10\u627E\u5230\u4E86\u81F4\u5BCC\u65B9\u5411\u3002\u7ECF\u8FC7\u4E00\u5E74\u7684\u52AA\u529B\uFF0C" + owo.state.name + "\u5E26\u9886\u6751\u6C11\u4EEC" + owo.state.text3 + "<br>&emsp;&emsp;\u6295\u5165\u6276\u8D2B\u4E8B\u4E1A\uFF0C\u5C06\u4E00\u8154\u70ED\u8840\u94FA\u9648\u5728\u4E00\u7EBF\u5DE5\u4F5C\u4E0A\uFF0C" + owo.state.name + "\u7684\u5DE5\u4F5C\u9010\u6E10\u5F97\u5230\u4E86\u6751\u6C11\u4EEC\u7684\u8BA4\u53EF\u3002\u4E3A\u4E86\u8FBE\u5230\u8131\u8D2B\u4E0D\u8FD4\u8D2B\uFF0C\u5E26\u9886\u6751\u6C11\u8131\u8D2B\u653B\u575A\uFF0C" + owo.state.name + "\u8FD8" + owo.state.text4 + "<br>&emsp;&emsp;2020\u5E74\u662F\u5168\u9762\u5EFA\u6210\u5C0F\u5EB7\u793E\u4F1A\u76EE\u6807\u5B9E\u73B0\u4E4B\u5E74\uFF0C\u662F\u5168\u9762\u6253\u8D62\u8131\u8D2B\u653B\u575A\u6218\u7684\u6536\u5B98\u4E4B\u5E74\u3002\u4E45\u4E45\u4E3A\u529F\uFF0C\u5728\u4EFB\u671F\u7ED3\u675F\u524D\uFF0C" + owo.state.name + "\u8FD8\u51C6\u5907" + owo.state.text5 + "\uFF0C\u4ECE\u800C\u5E26\u9886\u6751\u6C11\u671D\u7740\u8131\u8D2B\u4E0D\u8FD4\u8D2B\u7684\u65B9\u5411\u8FC8\u8FDB\u3002<br>&emsp;&emsp;\u4E0E\u5168\u56FD280\u591A\u4E07\u6276\u8D2B\u9A7B\u6751\u5E72\u90E8\u4E00\u6837\uFF0C" + owo.state.name + "\u7528\u5B9E\u9645\u884C\u52A8\u5F70\u663E\u8D23\u4EFB\u4F7F\u547D\uFF0C\u7528\u811A\u6B65\u4E08\u91CF\u7956\u56FD\u7684\u571F\u5730\uFF0C\u7528\u6276\u8D2B\u5145\u5B9E\u7740\u81EA\u5DF1\u7684\u4EBA\u751F\u3002"; // owo.tool.typing(this.query('p'), )
+
+          setTimeout(function() {
+            html2canvas(document.querySelector(".page11")).then(function(canvas) {
+              // console.log(canvas.toDataURL("image/png"))
+              _this2.query('.show-image').src = canvas.toDataURL("image/png");
+            });
+          }, 500);
+        }
+      }
+    };
+  </script>
+
+  <script src="./static/js/toast.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/typing.js" type="text/javascript" charset="UTF-8"></script>
+</body>
+
 </html>

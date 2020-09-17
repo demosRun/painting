@@ -55,3 +55,57 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 .next .text-box {
   opacity: 1;
 }
+
+@keyframes ant1 {
+  0%{
+    transform: translateX(-20px) translateY(-10px);
+  }
+  50%{
+    transform: translateX(-10px) translateY(-5px);
+  }
+  100%{
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes ant2 {
+  0%{
+    transform: translateX(20px) translateY(-10px);
+  }
+  50%{
+    transform: translateX(10px) translateY(-5px);
+  }
+  100%{
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes ant3 {
+  0% {
+    transform: translateX(-20px) translateY(10px);
+  }
+  50% {
+    transform: translateX(-10px) translateY(5px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes ant4 {
+  0% {
+    transform: translateX(20px) translateY(10px);
+  }
+  50% {
+    transform: translateX(10px) translateY(5px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

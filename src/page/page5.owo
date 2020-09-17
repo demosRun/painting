@@ -1,12 +1,12 @@
 <template lang="pug">
 .page5
   .so.so-0
-    img.so.so-1(src="@|page5-100.png|")
+    img.so.so-1.ani1(src="@|page5-100.png|")
     img.so.so-2(src="@|page5-101.png|")
     img.so.so-3(src="@|page5-107.png|")
     img.so.so-4(src="@|page5-108.png|")
-    img.so.so-5(src="@|page5-109.png|" o-tap="next('建设现代产业园，打造光伏发电基地。')")
-    img.so.so-6(src="@|page5-112.png|" o-tap="next('搭建优质农产品推广平台，助力农业生产转型升级。')")
+    img.so.so-5(src="@|page5-109.png|" o-tap="next('建设现代产业园，打造光伏发电基地。')" o-animation="shrink")
+    img.so.so-6(src="@|page5-112.png|" o-tap="next('搭建优质农产品推广平台，助力农业生产转型升级。')" o-animation="shrink")
     img.so.so-7(src="@|page5-113.png|")
 </template>
 <script>
@@ -37,16 +37,19 @@ module.exports = {
     left: 406px;
     top: 469px;
     z-index: -2;
+    animation: ant2 3s 1 0s linear;
   }
   .so-3 {
     left: 0px;
     top: 935px;
     z-index: -3;
+    animation: ant3 3s 1 0s linear;
   }
   .so-4 {
     left: 436px;
     top: 949px;
     z-index: -4;
+    animation: ant4 3s 1 0s linear;
   }
   .so-5 {
     left: 30px;
@@ -70,5 +73,9 @@ module.exports = {
     left: 29px;
     top: 140px;
     z-index: -9;
+  }
+
+  .ani1 {
+    animation: ant1 3s 1 0s linear;
   }
 </style>

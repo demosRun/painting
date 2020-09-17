@@ -1,15 +1,19 @@
 <template lang="pug">
 .page6
   .so.so-0
-    img.so.so-1(src="@|page6-97.png|")
-    img.so.so-2(src="@|page6-98.png|" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')")
-    img.so.so-3(src="@|page6-99.png|" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')")
+    img.so.so-1(src="@|page6-97.gif|")
+    img.so.so-2(src="@|page6-98.png|" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')" o-animation="shrink")
+    img.so.so-3(src="@|page6-99.png|" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')" o-animation="shrink")
     img.so.so-4(src="@|page6-100.png|")
     img.so.so-7(src="@|page6-106.png|")
     img.so.so-8(src="@|page6-105.png|")
 </template>
 <script>
 module.exports = {
+  created: function () {
+    owo.animate('fadeIn', this.query('.so-7'))
+    owo.animate('fadeIn', this.query('.so-8'), 800)
+  },
   next: function (text) {
     owo.state.text3 = text
     owo.go('page7//fade/moveFromRight/true/fade/moveFromLeft')

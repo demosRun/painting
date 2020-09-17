@@ -1,8 +1,8 @@
 <template lang="pug">
 .page8
   .so.so-0
-    img.so.so-1(src="@|88.png|" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')")
-    img.so.so-2(src="@|87.png|" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')")
+    img.so.so-1(src="@|88.png|" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')" o-animation="shrink")
+    img.so.so-2(src="@|87.png|" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')" o-animation="shrink")
     img.so.so-3(src="@|86.png|")
     img.so.so-4(src="@|95.png|")
     img.so.so-5(src="@|94.png|")
@@ -45,20 +45,24 @@ module.exports = {
   left: 428px;
   top: 844px;
   z-index: -4;
+  animation: ant4 3s 1 0s linear;
 }
 .so-5 {
   left: 26px;
   top: 564px;
   z-index: -5;
+  animation: ant1 3s 1 0s linear;
 }
 .so-6 {
   left: 406px;
   top: 522px;
   z-index: -6;
+  animation: ant2 3s 1 0s linear;
 }
 .so-7 {
   left: 0px;
   top: 948px;
   z-index: -7;
+  animation: ant3 3s 1 0s linear;
 }
 </style>

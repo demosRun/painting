@@ -95,6 +95,10 @@
 			"name": "typing",
 			"afterbody": true,
 			"src": "./owo_modules/typing.js"
+		},
+		{
+			"name": "html2canvas",
+			"src": "./owo_modules/html2canvas.min.js"
 		}
 	],
 	"styleList": [
