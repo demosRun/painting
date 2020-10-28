@@ -5,13 +5,19 @@
     img.doit.shandong(src="@|doit.png|")
     .show-item
   .subject
-    .subject-item.subject-item-1(o-tap="activeSubject") 搭建优质农产品推广平台，助力农业生产转型升级。
-    .subject-item.subject-item-2(o-tap="activeSubject") 建设现代产业园，打造光伏发电基地。
+    .subject-item.subject-item-1(o-tap="activeSubject")
+    .subject-item.subject-item-2(o-tap="activeSubject")
   img.next-button(src="@|next.png|" go="page8//fade/moveFromRight/true/fade/moveFromLeft")
 </template>
 <script>
 module.exports = {
   created: function () {
+    // 自动生成问题
+    if (owo.state.select2 == 1) {
+      
+    }
+    this.query('.subject-item-1').innerText = textList[6]
+    this.query('.subject-item-2').innerText = textList[7]
     let imageList = [
       '@|show3-1.png|',
     ]

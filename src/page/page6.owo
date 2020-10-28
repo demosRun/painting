@@ -5,13 +5,16 @@
     img.doit.shandong(src="@|doit.png|")
     .show-item
   .subject
-    .subject-item.subject-item-1(o-tap="activeSubject") 搭建优质农产品推广平台，助力农业生产转型升级。
-    .subject-item.subject-item-2(o-tap="activeSubject") 建设现代产业园，打造光伏发电基地。
+    .subject-item.subject-item-1(o-tap="activeSubject1")
+    .subject-item.subject-item-2(o-tap="activeSubject")
   img.next-button(src="@|next.png|" go="page7//fade/moveFromRight/true/fade/moveFromLeft")
 </template>
 <script>
 module.exports = {
   created: function () {
+    // 自动生成问题
+    this.query('.subject-item-1').innerText = textList[4]
+    this.query('.subject-item-2').innerText = textList[5]
     let imageList = [
       '@|show2-1.png|',
       '@|show2-2.png|',
@@ -28,7 +31,15 @@ module.exports = {
       }, 1000);
     }, 4000);
   },
-  activeSubject: function () {
+  activeSubject1: function () {
+    owo.state.select2 = 1
+    this.queryAll('.subject-item').forEach(element => {
+      element.classList.remove('active')
+      this.$target.classList.add('active')
+    });
+  },
+  activeSubject2: function () {
+    owo.state.select2 = 2
     this.queryAll('.subject-item').forEach(element => {
       element.classList.remove('active')
       this.$target.classList.add('active')

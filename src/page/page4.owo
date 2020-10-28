@@ -3,13 +3,14 @@
   .so.so-0
     img.so.so-1(src="@|page4-100.gif|")
     img.so.so-2(src="@|page4-99.png|")
-    img.so.so-3(src="@|page4-101.png|")
+    .so-3 
   img.button(src="@|next.png|" go="page5//fade/moveFromRight/true/fade/moveFromLeft" o-animation="shrink")
 </template>
 <script>
 module.exports = {
   created: function () {
     owo.animate('fadeInDown', this.query('.so-3'))
+    this.query('.so-3').innerText = `经过你的走访和调研，发现这里${textList[0]},还有${textList[1]}未能脱贫。`
   }
 }
 </script>
@@ -35,9 +36,16 @@ module.exports = {
   z-index: -2;
 }
 .so-3 {
-  left: 71px;
-  top: 0px;
-  z-index: -3;
+  font-size: 36px;
+  line-height: 70px;
+  font-weight: bold;
+  width: 600px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-indent: 2em;
+  top: 0;
 }
 .button {
   position: absolute;

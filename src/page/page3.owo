@@ -20,7 +20,8 @@ module.exports = {
   next1: function (text) {
     owo.animate('bounceOutLeft', this.query('.so-7'))
     owo.animate('bounceOutRight', this.query('.so-6'), 100)
-    owo.state.text1 = text
+    owo.state.text1 = '到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。'
+    owo.state.stepSelect = 1
     setTimeout(() => {
       owo.go('page4//fade/moveFromRight/true/fade/moveFromLeft')
     }, 1000);
@@ -29,7 +30,8 @@ module.exports = {
   next2: function (text) {
     owo.animate('bounceOutLeft', this.query('.so-3'))
     owo.animate('bounceOutRight', this.query('.so-4'), 100)
-    owo.state.text1 = text
+    owo.state.text1 = '统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。'
+    owo.state.stepSelect = 2
     setTimeout(() => {
       owo.go('page4//fade/moveFromRight/true/fade/moveFromLeft')
     }, 1000);
