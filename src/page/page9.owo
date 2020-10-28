@@ -2,16 +2,14 @@
 .page9
   .so.so-0
     img.so.so-1(src="@|page9-32.png|")
-    img.so.so-2(src="@|page9-42.png|" o-tap="next" o-animation="shrink")
+    img.so.so-2(src="@|page9-42.png|" go="page11//fade/moveFromRight/true/fade/moveFromLeft" o-animation="shrink")
+    img.so.button-2(src="@|page9-42.png|" go="page12//fade/moveFromRight/true/fade/moveFromLeft" o-animation="shrink")
     img.so.so-3(src="@|page9-41.png|")
 </template>
 <script>
 module.exports = {
   created: function () {
     owo.animate('fadeInRight', this.query('.so-1'))
-  },
-  next: function (name) {
-    owo.go('page11//fade/moveFromRight/true/fade/moveFromLeft')
   }
 }
 </script>
@@ -42,5 +40,11 @@ module.exports = {
   left: 0px;
   top: 0px;
   z-index: -3;
+}
+.button-2 {
+  left: -80px;
+  right: 0;
+  top: 721px;
+  margin: 0 auto;
 }
 </style>

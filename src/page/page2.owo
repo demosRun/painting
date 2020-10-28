@@ -1,27 +1,45 @@
 <template lang="pug">
 .page2
+  img.luxian(src="@|luxian.png|")
   .so.so-0
-    span.so.so-1 贵州
-    span.so.so-2 山西
-    span.so.so-3 新疆
-    span.so.so-4 安徽
-    span.so.so-5 陕西
-    span.so.so-6 山东
-    img.so.so-7(src="@|255.png|" o-animation="shrink" o-tap="next('贵州')")
-    img.so.so-8(src="@|269.png|" o-animation="shrink" o-tap="next('陕西')")
-    img.so.so-9(src="@|281.png|" o-animation="shrink" o-tap="next('安徽')")
-    img.so.so-10(src="@|289.png|" o-animation="shrink" o-tap="next('山东')")
-    img.so.so-11(src="@|301.png|" o-animation="shrink" o-tap="next('山西')")
-    img.so.so-12(src="@|311.png|" o-animation="shrink" o-tap="next('新疆')")
+    .item-box
+      span.so.so-1.so-item 贵州
+      img.so.so-7(src="@|255.png|" o-animation="shrink" o-tap="next('贵州')")
+    .item-box
+      span.so.so-2.so-item 山西
+      img.so.so-11(src="@|301.png|" o-animation="shrink" o-tap="next('山西')")
+    .item-box
+      span.so.so-3.so-item 新疆
+      img.so.so-12(src="@|311.png|" o-animation="shrink" o-tap="next('新疆')")
+    .item-box
+      span.so.so-4.so-item 安徽
+      img.so.so-9(src="@|281.png|" o-animation="shrink" o-tap="next('安徽')")
+    .item-box
+      span.so.so-5.so-item 陕西
+      img.so.so-8(src="@|269.png|" o-animation="shrink" o-tap="next('陕西')")
+    .item-box
+      span.so.so-6.so-item 山东
+      img.so.so-10(src="@|289.png|" o-animation="shrink" o-tap="next('山东')")
+    
+    
 </template>
 <script>
 module.exports = {
+  data: {
+    busy: false
+  },
   created: function () {
     owo.tool.toast('请选择您的“上任”地区')
   },
   next: function (name) {
+    if (this.data.busy) return
+    const parent = this.$target.parentNode || this.$target.parentElement
+    parent.classList.add('active')
+    this.data.busy = true
     owo.state.place = name
-    owo.go('page10//fade/moveFromRight/true/fade/moveFromLeft')
+    setTimeout(() => {
+      owo.go('page10//fade/moveFromRight/true/fade/moveFromLeft')
+    }, 1000);
   }
 }
 </script>
@@ -37,7 +55,7 @@ module.exports = {
   z-index: 0;;
 }
 .so-1 {
-  left: 519px;
+  left: 485px;
   top: 883px;
   z-index: -1;
 }
@@ -47,7 +65,7 @@ module.exports = {
   z-index: -2;
 }
 .so-3 {
-  left: 516px;
+  left: 485px;
   top: 581px;
   z-index: -3;
 }
@@ -57,7 +75,7 @@ module.exports = {
   z-index: -4;
 }
 .so-5 {
-  left: 520px;
+  left: 485px;
   top: 254px;
   z-index: -5;
 }
@@ -101,5 +119,21 @@ span {
   font-size: 35px;
   font-weight: bold;
   line-height: 45px;
+}
+.so-item {
+  background-color: #543b2b;
+  color: #e2d7cb;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.active .so-item {
+  background-color: #a88560;
+}
+.luxian {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 225px;
 }
 </style>

@@ -1,0 +1,19 @@
+<template lang="pug">
+.page12
+  img(src="@|share-2.jpg|")
+</template>
+<script>
+module.exports = {
+
+}
+</script>
+<style lang="less">
+img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+</style>

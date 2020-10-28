@@ -1,72 +1,106 @@
 <template lang="pug">
 .page6
-  .so.so-0
-    img.so.so-1(src="@|page6-97.gif|")
-    img.so.so-2(src="@|page6-98.png|" o-tap="next('联合相关机构开展培训班，组织督促村民参与学习，通过扶智来扶志，实现脱贫不返贫。')" o-animation="shrink")
-    img.so.so-3(src="@|page6-99.png|" o-tap="next('与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。')" o-animation="shrink")
-    img.so.so-4(src="@|page6-100.png|")
-    img.so.so-7(src="@|page6-106.png|")
-    img.so.so-8(src="@|page6-105.png|")
+  //- 题目
+  .show-box-bg
+    img.doit.shandong(src="@|doit.png|")
+    .show-item
+  .subject
+    .subject-item.subject-item-1(o-tap="activeSubject") 搭建优质农产品推广平台，助力农业生产转型升级。
+    .subject-item.subject-item-2(o-tap="activeSubject") 建设现代产业园，打造光伏发电基地。
+  img.next-button(src="@|next.png|" go="page7//fade/moveFromRight/true/fade/moveFromLeft")
 </template>
 <script>
 module.exports = {
   created: function () {
-    owo.animate('fadeIn', this.query('.so-7'))
-    owo.animate('fadeIn', this.query('.so-8'), 800)
+    let imageList = [
+      '@|show2-1.png|',
+      '@|show2-2.png|',
+      '@|show2-3.png|'
+    ]
+    let ind = 0
+    setInterval(() => {
+      ind++
+      if (ind > 2) ind = 0
+      this.query('.show-item').style.opacity = 0
+      setTimeout(() => {
+        this.query('.show-item').style.backgroundImage = `url('${imageList[ind]}')`
+        this.query('.show-item').style.opacity = 1
+      }, 1000);
+    }, 4000);
   },
-  next: function (text) {
-    owo.state.text3 = text
-    owo.go('page7//fade/moveFromRight/true/fade/moveFromLeft')
+  activeSubject: function () {
+    this.queryAll('.subject-item').forEach(element => {
+      element.classList.remove('active')
+      this.$target.classList.add('active')
+    });
   }
 }
 </script>
 <style lang="less">
+.page6 {
+  background-image: url('@|bg-2.jpg|');
+}
 .so {
   position: absolute;
 }
-.so-0 {
-  left: 0px;
-  top: 208px;
-  width: 750px;
-  height: 1213px;
-  z-index: 0;;
+.subject {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 960px;
+  margin: 0 auto;
 }
-.so-1 {
-  left: 72px;
-  top: 513px;
-  z-index: -1;
+.subject-item {
+  width: 580px;
+  height: 80px;
+  background-color: #e4ded7;
+  margin: 25px auto;
+  font-size: 30px;
+  padding: 25px;
+  line-height: 40px;
+  color: #3d3c3a;
+  padding-left: 90px;
+  background-repeat: no-repeat;
+  background-position: 25px 25px;
+  border: 2px solid #e4ded7;
 }
-.so-2 {
-  left: 35px;
-  top: 360px;
+.subject-item.active {
+  background-image: url('@|chantou.png|');
+  color: #a53e13;
+  background-color: #d6ccbf;
+  border: 2px solid #a53e13;
 }
-.so-3 {
-  left: 35px;
-  top: 200px;
+.show-box-bg {
+  background-image: url('@|show-box-bg.png|');
+  width: 743px;
+  height: 749px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 65px;
+  .doit {
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    top: -50%;
+    bottom: -50%;
+    margin: auto;
+    
+  }
+  .show-item {
+    background-image: url('@|show2-1.png|');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: opacity 1s;
+  }
 }
-.so-4 {
-  left: 77px;
-  top: 0px;
-  z-index: -4;
-}
-.so-5 {
-  left: 33px;
-  top: 357px;
-  z-index: -5;
-}
-.so-6 {
-  left: 33px;
-  top: 201px;
-  z-index: -6;
-}
-.so-7 {
-  left: 160px;
-  top: 548px;
-  z-index: -7;
-}
-.so-8 {
-  left: 0px;
-  top: 477px;
-  z-index: -8;
+.next-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1290px;
+  margin: 0 auto;
 }
 </style>

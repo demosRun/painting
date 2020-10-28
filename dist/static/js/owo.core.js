@@ -1,4 +1,4 @@
-// Thu Sep 17 2020 10:22:37 GMT+0800 (GMT+08:00)
+// Wed Oct 28 2020 14:50:50 GMT+0800 (GMT+08:00)
 var owo = {tool: {},state: {},};
 /* 方法合集 */
 var _owo = {
@@ -194,7 +194,7 @@ _owo.addEvent = function (tempDom, moudleScript) {
                 break;
             }
             break
-          }
+          }   
           default: {
             
             _owo.bindEvent(eventName, eventFor, tempDom, moudleScript)
@@ -267,6 +267,10 @@ _owo.cutStringArray = function (original, before, after, index, inline) {
 owo.animate = function (name, dom, delay) {
   // 都使用IE了效果还重要吗
   if (_owo.isIE) return
+  var owoAni = dom.getAttribute('o-animation')
+  if (owoAni) {
+    dom.setAttribute('o-animation', owoAni + '-suspend')
+  }
   dom.classList.add(name)
   dom.classList.add('owo-animated')
   if (delay) {
@@ -278,6 +282,9 @@ owo.animate = function (name, dom, delay) {
     dom.classList.remove('owo-animated')
     if (delay) {
       dom.style.animationDelay = ''
+    }
+    if (owoAni) {
+      dom.setAttribute('o-animation', owoAni)
     }
   }
 }
@@ -589,6 +596,15 @@ owo.go = function (aniStr) {
 }
 
 
+// 待修复 跳转返回没有了
+var toList = document.querySelectorAll('[go]')
+for (var index = 0; index < toList.length; index++) {
+  var element = toList[index]
+  element.onclick = function () {
+    owo.go(this.attributes['go'].value)
+  }
+}
+
 // 沙盒运行
 function shaheRun (code) {
   try {
@@ -663,11 +679,6 @@ _owo.showPage = function() {
   owo.entry = document.querySelector('[template]').getAttribute('template')
   // 取出URL地址判断当前所在页面
   var pageArg = _owo.getarg(window.location.hash)
-  
-  if (pageArg !== null) {
-    window.location.href = ''
-    return
-  }
   
   
 
@@ -802,4 +813,21 @@ function switchPage (oldUrlParam, newUrlParam) {
 if (window.onhashchange) {window.onhashchange = _owo.hashchange;} else {window.onpopstate = _owo.hashchange;}
 // 执行页面加载完毕方法
 _owo.ready(_owo.showPage)
+
+
+// 这是用于代码调试的自动刷新代码，他不应该出现在正式上线版本!
+if ("WebSocket" in window) {
+  // 打开一个 web socket
+  if (!window._owo.ws) window._owo.ws = new WebSocket("ws://" + window.location.host)
+  window._owo.ws.onmessage = function (evt) { 
+    if (evt.data == 'reload') {
+      location.reload()
+    }
+  }
+  window._owo.ws.onclose = function() { 
+    console.info('与服务器断开连接')
+  }
+} else {
+  console.error('浏览器不支持WebSocket')
+}
 

@@ -4,14 +4,12 @@
     img.so.so-1(src="@|page4-100.gif|")
     img.so.so-2(src="@|page4-99.png|")
     img.so.so-3(src="@|page4-101.png|")
+  img.button(src="@|next.png|" go="page5//fade/moveFromRight/true/fade/moveFromLeft" o-animation="shrink")
 </template>
 <script>
 module.exports = {
   created: function () {
     owo.animate('fadeInDown', this.query('.so-3'))
-    setTimeout(() => {
-      owo.go('page5//fade/moveFromRight/true/fade/moveFromLeft')
-    }, 5000);
   }
 }
 </script>
@@ -40,5 +38,10 @@ module.exports = {
   left: 71px;
   top: 0px;
   z-index: -3;
+}
+.button {
+  position: absolute;
+  top: 1090px;
+  left: 20px;
 }
 </style>

@@ -168,6 +168,11 @@
 			"name": "page11",
 			"src": "/src/page/page11.owo",
 			"type": "page"
+		},
+		{
+			"name": "page12",
+			"src": "/src/page/page12.owo",
+			"type": "page"
 		}
 	],
 	"mode": {
@@ -191,6 +196,7 @@
 			"debug": false,
 			"basePath": "./",
 			"alertLink": false,
+			"handleLink": true,
 			"route": {
 				"startAtHome": true
 			},

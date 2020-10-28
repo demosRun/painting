@@ -8,6 +8,7 @@
     img.so.so-6(src="@|page10-105.png|")
     img.so.so-7(src="@|page10-104.png|")
     .text 辗转几个小时车程后，你终于来到了位于（河北/山东/山西/陕西/贵州/安徽/新疆）的贫困村。
+    img.button(src="@|next.png|" go="page3//fade/moveFromRight/true/fade/moveFromLeft")
 </template>
 
 <script>
@@ -20,9 +21,6 @@ module.exports = {
     owo.animate('lightSpeedIn', this.query('.so-4'), 800)
     owo.animate('lightSpeedIn', this.query('.so-4'), 1400)
     owo.animate('fadeIn', this.query('.text'), 2800)
-    setTimeout(() => {
-      owo.go('page3//fade/moveFromRight/true/fade/moveFromLeft')
-    }, 5000);
   }
 }
 </script>
@@ -40,7 +38,7 @@ module.exports = {
 }
 .so-1 {
   left: 180px;
-  top: 776px;
+  top: 706px;
   z-index: -1;
 }
 .so-2 {
@@ -50,7 +48,7 @@ module.exports = {
 }
 .so-3 {
   left: 161px;
-  top: 994px;
+  top: 924px;
   z-index: -3;
 }
 .so-4 {
@@ -96,5 +94,12 @@ module.exports = {
 
 .car-ani {
     animation: car 4s 1 0s linear;
+}
+.button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 1085px;
 }
 </style>

@@ -9,7 +9,8 @@
   img.so.so-4(src="@|57.png|")
   //- 点击下一步的文字
   .text-box
-    span 胡汉三
+    span 
+  img.button-2(src="@|next.png|" go="page2//fade/moveFromRight/true/fade/moveFromLeft")
   img.button(src="@|next.png|" o-tap="next")
 </template>
 
@@ -29,8 +30,12 @@
         this.$el.classList.add('next')
         this.$target.style.display = 'none'
         setTimeout(() => {
-          owo.go('page2//fade/moveFromRight/true/fade/moveFromLeft')
-        }, 4000);
+          this.query('.button-2').style.display = 'block'
+        }, 500);
+        
+        // setTimeout(() => {
+        //   owo.go('page2//fade/moveFromRight/true/fade/moveFromLeft')
+        // }, 4000);
       } else {
         owo.tool.toast('您还未填写名字!')
       }
@@ -66,8 +71,9 @@
   border: none;
   background-color: transparent;
   outline: none;
-  font-size: 31px;
+  font-size: 40px;
   width: 180px;
+  color: #96774f;
 }
 .so-2 {
   left: 187px;
@@ -94,7 +100,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 15%;
+  top: 970px;
 }
 .text-box {
   background-image: url('@|page1-text.png|');
@@ -113,14 +119,22 @@
   margin: auto;
   opacity: 0;
   span {
-    font-size: 30px;
+    font-size: 48px;
     position: absolute;
     bottom: 50px;
     width: 165px;
     line-height: 60px;
     text-align: center;
     font-weight: bold;
-    color: #000;
+    color: #96774f;
   }
+}
+.button-2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 960px;
+  margin: 0 auto;
+  display: none;
 }
 </style>
