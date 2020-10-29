@@ -5,10 +5,12 @@
   p
   .place
   img.show-image
+  img.back.hide-to-image(src="@|back.png|" go="page9//fade/moveFromLeft/true/fade/moveFromRight" o-animation="shrink")
 </template>
 <script>
 module.exports = {
   created: function () {
+    owo.tool.toast('长按图片分享海报')
     owo.state.name = owo.state.name || '你的名字'
     owo.state.place = owo.state.place || '西安'
     this.query('.place').innerText = owo.state.place
@@ -16,7 +18,14 @@ module.exports = {
     this.query('p').innerHTML = `${owo.state.name}扶贫路线为安徽地区贫困村。与全国280多万扶贫驻村干部一样，用脚步丈量祖国的土地，用扶贫充实自己的人生，用实际行动彰显着责任和使命。`
     // owo.tool.typing(this.query('p'), )
     setTimeout(() => {
-      html2canvas(document.querySelector(".page12")).then(canvas => {
+      html2canvas(document.querySelector(".page12"), {
+        ignoreElements: function ignoreElements(element) {
+          if (element.classList.contains('hide-to-image')) {
+            return true;
+          }
+          return false;
+        }
+      }).then(canvas => {
         // console.log(canvas.toDataURL("image/png"))
         this.query('.show-image').src = canvas.toDataURL("image/png")
       });
@@ -80,5 +89,8 @@ p {
   width: 30px;
   line-height: 26px;
   overflow: hidden;
+}
+.back {
+  top: 115px;
 }
 </style>

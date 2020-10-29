@@ -159,3 +159,25 @@ canvas {
 .shandong {
   animation: shandongAni 2s infinite 0s linear;
 }
+
+.subject-item {
+  width: 580px;
+  height: 120px;
+  background-color: #e4ded7;
+  margin: 20px auto;
+  font-size: 28px;
+  padding: 10px 25px;
+  line-height: 40px;
+  color: #3d3c3a;
+  padding-left: 90px;
+  background-repeat: no-repeat;
+  background-position: 25px 25px;
+  border: 2px solid #e4ded7;
+}
+
+.back {
+  position: absolute;
+  left: 80px;
+  top: 180px;
+  z-index: 999;
+}

@@ -501,21 +501,6 @@ li {
   margin: 0 auto;
 }
 
-.page5 .subject-item {
-  width: 580px;
-  height: 80px;
-  background-color: #e4ded7;
-  margin: 25px auto;
-  font-size: 30px;
-  padding: 25px;
-  line-height: 40px;
-  color: #3d3c3a;
-  padding-left: 90px;
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-  border: 2px solid #e4ded7;
-}
-
 .page5 .subject-item.active {
   background-image: url('../resource/chantou.png');
   color: #a53e13;
@@ -573,21 +558,6 @@ li {
   right: 0;
   top: 960px;
   margin: 0 auto;
-}
-
-.page6 .subject-item {
-  width: 580px;
-  height: 80px;
-  background-color: #e4ded7;
-  margin: 25px auto;
-  font-size: 30px;
-  padding: 25px;
-  line-height: 40px;
-  color: #3d3c3a;
-  padding-left: 90px;
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-  border: 2px solid #e4ded7;
 }
 
 .page6 .subject-item.active {
@@ -649,21 +619,6 @@ li {
   margin: 0 auto;
 }
 
-.page7 .subject-item {
-  width: 580px;
-  height: 80px;
-  background-color: #e4ded7;
-  margin: 25px auto;
-  font-size: 28px;
-  padding: 25px;
-  line-height: 40px;
-  color: #3d3c3a;
-  padding-left: 90px;
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-  border: 2px solid #e4ded7;
-}
-
 .page7 .subject-item.active {
   background-image: url('../resource/chantou.png');
   color: #a53e13;
@@ -721,21 +676,6 @@ li {
   right: 0;
   top: 960px;
   margin: 0 auto;
-}
-
-.page8 .subject-item {
-  width: 580px;
-  height: 80px;
-  background-color: #e4ded7;
-  margin: 25px auto;
-  font-size: 30px;
-  padding: 25px;
-  line-height: 40px;
-  color: #3d3c3a;
-  padding-left: 90px;
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-  border: 2px solid #e4ded7;
 }
 
 .page8 .subject-item.active {
@@ -1033,6 +973,10 @@ li {
   width: 30px;
   line-height: 26px;
   overflow: hidden;
+}
+
+.page12 .back {
+  top: 115px;
 }
 /* 页面切换动画 */
 .o-page-fade {

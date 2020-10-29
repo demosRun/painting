@@ -28,7 +28,7 @@ module.exports = {
       setTimeout(() => {
         this.query('.show-item').style.backgroundImage = `url('${imageList[ind]}')`
         this.query('.show-item').style.opacity = 1
-      }, 1000);
+      }, 800);
     }, 4000);
     // display: none;
     
@@ -56,20 +56,6 @@ module.exports = {
   right: 0;
   top: 960px;
   margin: 0 auto;
-}
-.subject-item {
-  width: 580px;
-  height: 80px;
-  background-color: #e4ded7;
-  margin: 25px auto;
-  font-size: 30px;
-  padding: 25px;
-  line-height: 40px;
-  color: #3d3c3a;
-  padding-left: 90px;
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-  border: 2px solid #e4ded7;
 }
 .subject-item.active {
   background-image: url('@|chantou.png|');

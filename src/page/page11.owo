@@ -5,16 +5,24 @@
   p
   img.show-image
   img.qr(src="@|qr.png|")
+  img.back.hide-to-image(src="@|back.png|" go="page9//fade/moveFromLeft/true/fade/moveFromRight" o-animation="shrink")
 </template>
 <script>
 module.exports = {
   created: function () {
-    
+    owo.tool.toast('长按图片分享海报')
     this.query('h2').innerHTML = `${owo.state.name}：我既做了扶贫 扶贫也成就了我`
     this.query('p').innerHTML = `&emsp;&emsp;${owo.state.name}于2019年来到${owo.state.place}地区的贫困村，经过${owo.state.text1}后，了解到当地${textList[0]},还有${textList[1]}未能脱贫。为了带领村民脱贫，${owo.state.name}从${owo.state.text2}入手，逐渐找到了致富方向。经过一年的努力，${owo.state.name}带领村民们${owo.state.text2}。<br>&emsp;&emsp;投入扶贫事业，将一腔热血铺陈在一线工作上，${owo.state.name}的工作逐渐得到了村民们的认可。为了达到脱贫不返贫，带领村民脱贫攻坚，${owo.state.name}还${owo.state.text4}<br>&emsp;&emsp;2020年是全面建成小康社会目标实现之年，是全面打赢脱贫攻坚战的收官之年。久久为功，在任期结束前，${owo.state.name}还准备${owo.state.text5}，从而带领村民朝着脱贫不返贫的方向迈进。<br>&emsp;&emsp;与全国280多万扶贫驻村干部一样，${owo.state.name}用实际行动彰显责任使命，用脚步丈量祖国的土地，用扶贫充实着自己的人生。`
     // owo.tool.typing(this.query('p'), )
     setTimeout(() => {
-      html2canvas(document.querySelector(".page11")).then(canvas => {
+      html2canvas(document.querySelector(".page11"), {
+        ignoreElements: function ignoreElements(element) {
+          if (element.classList.contains('hide-to-image')) {
+            return true;
+          }
+          return false;
+        }
+      }).then(canvas => {
         // console.log(canvas.toDataURL("image/png"))
         this.query('.show-image').src = canvas.toDataURL("image/png")
       });
