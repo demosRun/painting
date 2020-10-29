@@ -6,7 +6,7 @@
     .show-item
   .subject
     .subject-item.subject-item-1(o-tap="activeSubject1")
-    .subject-item.subject-item-2(o-tap="activeSubject")
+    .subject-item.subject-item-2(o-tap="activeSubject2")
   img.next-button(src="@|next.png|" go="page7//fade/moveFromRight/true/fade/moveFromLeft")
 </template>
 <script>
@@ -33,10 +33,13 @@ module.exports = {
   },
   activeSubject1: function () {
     owo.state.select2 = 1
+    owo.state.text3 = this.$target.innerText
     this.queryAll('.subject-item').forEach(element => {
       element.classList.remove('active')
       this.$target.classList.add('active')
     });
+    // display: none;
+    this.query('.next-button').style.display = 'block'
   },
   activeSubject2: function () {
     owo.state.select2 = 2
@@ -44,6 +47,7 @@ module.exports = {
       element.classList.remove('active')
       this.$target.classList.add('active')
     });
+    this.query('.next-button').style.display = 'block'
   }
 }
 </script>
@@ -104,7 +108,7 @@ module.exports = {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    transition: opacity 1s;
+    transition: opacity 0.8s;
   }
 }
 .next-button {
@@ -113,5 +117,6 @@ module.exports = {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 </style>

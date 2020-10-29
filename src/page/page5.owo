@@ -19,12 +19,11 @@ module.exports = {
       '@|show1-1.png|',
       '@|show1-2.png|',
       '@|show1-3.png|',
-      '@|show1-4.png|',
     ]
     let ind = 0
     setInterval(() => {
       ind++
-      if (ind > 3) ind = 0
+      if (ind > 2) ind = 0
       this.query('.show-item').style.opacity = 0
       setTimeout(() => {
         this.query('.show-item').style.backgroundImage = `url('${imageList[ind]}')`
@@ -33,10 +32,13 @@ module.exports = {
     }, 4000);
   },
   activeSubject: function () {
+    owo.state.text2 = this.$target.innerText
     this.queryAll('.subject-item').forEach(element => {
       element.classList.remove('active')
       this.$target.classList.add('active')
     });
+    // display: none;
+    this.query('.next-button').style.display = 'block'
   }
 }
 </script>
@@ -97,7 +99,7 @@ module.exports = {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    transition: opacity 1s;
+    transition: opacity 0.8s;
   }
 }
 .next-button {
@@ -106,5 +108,6 @@ module.exports = {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 </style>

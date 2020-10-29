@@ -5,13 +5,15 @@
     img.doit.shandong(src="@|doit.png|")
     .show-item
   .subject
-    .subject-item.subject-item-1(o-tap="activeSubject") 搭建优质农产品推广平台，助力农业生产转型升级。
-    .subject-item.subject-item-2(o-tap="activeSubject") 建设现代产业园，打造光伏发电基地。
+    .subject-item.subject-item-1(o-tap="activeSubject")
+    .subject-item.subject-item-2(o-tap="activeSubject")
   img.next-button(src="@|next.png|" go="page9//fade/moveFromRight/true/fade/moveFromLeft")
 </template>
 <script>
 module.exports = {
   created: function () {
+    this.query('.subject-item-1').innerText = textList[10]
+    this.query('.subject-item-2').innerText = textList[11]
     let imageList = [
       '@|show4-1.png|',
       '@|show4-2.png|',
@@ -21,19 +23,23 @@ module.exports = {
     let ind = 0
     setInterval(() => {
       ind++
-      if (ind > 1) ind = 0
+      if (ind > 3) ind = 0
       this.query('.show-item').style.opacity = 0
       setTimeout(() => {
         this.query('.show-item').style.backgroundImage = `url('${imageList[ind]}')`
         this.query('.show-item').style.opacity = 1
       }, 1000);
     }, 4000);
+    // display: none;
+    
   },
   activeSubject: function () {
+    owo.state.text5 = this.$target.innerText
     this.queryAll('.subject-item').forEach(element => {
       element.classList.remove('active')
       this.$target.classList.add('active')
     });
+    this.query('.next-button').style.display = 'block'
   }
 }
 </script>
@@ -94,7 +100,7 @@ module.exports = {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    transition: opacity 1s;
+    transition: opacity 0.8s;
   }
 }
 .next-button {
@@ -103,5 +109,6 @@ module.exports = {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 </style>

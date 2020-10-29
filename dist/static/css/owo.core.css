@@ -2,7 +2,6 @@ body, html, .page, .page-box {
   padding: 0;
   margin: 0;
   width: 100%;
-  min-height: 100%;
 }
 
 .owo-animation {
@@ -161,7 +160,6 @@ li {
   left: 193px;
   top: 510px;
   z-index: 2;
-  background-image: url('../resource/17.png');
   height: 70px;
   line-height: 70px;
   background-repeat: no-repeat;
@@ -172,6 +170,15 @@ li {
   font-size: 40px;
   width: 180px;
   color: #96774f;
+}
+
+.page-1 .so-1.so-bg {
+  background-image: url('../resource/17.png');
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .page-1 .so-2 {
@@ -234,7 +241,7 @@ li {
 }
 
 .page-1 .text-box span {
-  font-size: 48px;
+  font-size: 38px;
   position: absolute;
   bottom: 50px;
   width: 165px;
@@ -369,8 +376,7 @@ li {
 
 .page2 .luxian {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 47px;
   margin: auto;
   top: 225px;
 }
@@ -401,9 +407,8 @@ li {
 }
 
 .page3 .so-3 {
-  left: 0px;
-  top: 63px;
-  z-index: -3;
+  right: 0px;
+  top: 78px;
 }
 
 .page3 .so-4 {
@@ -421,15 +426,22 @@ li {
 }
 
 .page3 .so-6 {
-  left: 222px;
-  top: 0px;
-  z-index: -6;
+  left: 7px;
+  top: 655px;
 }
 
 .page3 .so-7 {
   left: 0px;
   top: 161px;
   z-index: -7;
+}
+
+.page3 .button {
+  position: absolute;
+  right: 93px;
+  top: 860px;
+  z-index: 999;
+  display: none;
 }
 .page4 .so {
   position: absolute;
@@ -536,7 +548,7 @@ li {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: opacity 1s;
+  transition: opacity 0.8s;
 }
 
 .page5 .next-button {
@@ -545,6 +557,7 @@ li {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 .page6 {
   background-image: url('../resource/bg-2.jpg');
@@ -609,7 +622,7 @@ li {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: opacity 1s;
+  transition: opacity 0.8s;
 }
 
 .page6 .next-button {
@@ -618,6 +631,7 @@ li {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 .page7 {
   background-image: url('../resource/bg-3.jpg');
@@ -640,7 +654,7 @@ li {
   height: 80px;
   background-color: #e4ded7;
   margin: 25px auto;
-  font-size: 30px;
+  font-size: 28px;
   padding: 25px;
   line-height: 40px;
   color: #3d3c3a;
@@ -682,7 +696,7 @@ li {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: opacity 1s;
+  transition: opacity 0.8s;
 }
 
 .page7 .next-button {
@@ -691,6 +705,7 @@ li {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 .page8 {
   background-image: url('../resource/bg-4.jpg');
@@ -755,7 +770,7 @@ li {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: opacity 1s;
+  transition: opacity 0.8s;
 }
 
 .page8 .next-button {
@@ -764,6 +779,7 @@ li {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 .page9 .so {
   position: absolute;
@@ -789,8 +805,8 @@ li {
 }
 
 .page9 .so-2 {
-  left: 203px;
-  top: 818px;
+  left: 5px;
+  top: 721px;
   z-index: 2;
 }
 
@@ -950,13 +966,73 @@ li {
   transform: translate3d(0, 0, 0);
   opacity: 0;
 }
-.page12 img {
+
+.page11 .qr {
   position: absolute;
   left: 0;
   right: 0;
+  margin: auto;
+  top: 1230px;
+}
+.page12 .bg {
+  position: absolute;
+  left: 0;
   top: 0;
+  right: 0;
   bottom: 0;
   margin: auto;
+}
+
+.page12 h2 {
+  position: absolute;
+  left: 136px;
+  top: 309px;
+  font-size: 27px;
+  color: #3e3123;
+  display: block;
+  width: 139px;
+  line-height: 40px;
+}
+
+.page12 p {
+  position: absolute;
+  top: 790px;
+  width: 500px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 27px;
+  line-height: 47px;
+  color: #563717;
+  text-indent: 2em;
+  word-break: break-all;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.page12 .show-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+}
+
+.page12 .place {
+  position: absolute;
+  left: 265px;
+  top: 395px;
+  color: white;
+  font-size: 22px;
+  width: 30px;
+  line-height: 26px;
+  overflow: hidden;
 }
 /* 页面切换动画 */
 .o-page-fade {
@@ -1036,22 +1112,6 @@ li {
   animation-name: fadeInDown;
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInLeft {
-  animation-name: fadeInLeft;
-}
-
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -1068,36 +1128,20 @@ li {
   animation-name: fadeInRight;
 }
 
-@keyframes bounceOutLeft {
-  20% {
-    opacity: 1;
-    transform: translate3d(20px, 0, 0);
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
   }
 
   to {
-    opacity: 0;
-    transform: translate3d(-2000px, 0, 0);
-  }
-}
-
-.bounceOutLeft {
-  animation-name: bounceOutLeft;
-}
-
-@keyframes bounceOutRight {
-  20% {
     opacity: 1;
-    transform: translate3d(-20px, 0, 0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translate3d(2000px, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.bounceOutRight {
-  animation-name: bounceOutRight;
+.fadeInLeft {
+  animation-name: fadeInLeft;
 }
 
 @keyframes rotateInDownLeft {

@@ -4,19 +4,14 @@
   h2
   p
   img.show-image
+  img.qr(src="@|qr.png|")
 </template>
 <script>
 module.exports = {
   created: function () {
-    // owo.state.name = '我'
-    // owo.state.place = "安徽"
-    // owo.state.text1 = "到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。"
-    // owo.state.text2 = "搭建优质农产品推广平台，助力农业生产转型升级。"
-    // owo.state.text3 = "与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。"
-    // owo.state.text4 = "为村里的农产品注册了品牌，成立了推广协会，进一步为村里打造“明星产品”"
-    // owo.state.text5 = "与大城市的农产品龙头企业建立合作，培养人才，形成产销一条龙，为村集体实现创收。"
+    
     this.query('h2').innerHTML = `${owo.state.name}：我既做了扶贫 扶贫也成就了我`
-    this.query('p').innerHTML = `&emsp;&emsp;${owo.state.name}于2019年来到${owo.state.place}地区的贫困村，经过${owo.state.text1}后，了解到当地产业转型升级迫在眉睫,还有27户88人未能脱贫。为了带领村民脱贫，${owo.state.name}从${owo.state.text2}入手，逐渐找到了致富方向。经过一年的努力，${owo.state.name}带领村民们${owo.state.text3}<br>&emsp;&emsp;投入扶贫事业，将一腔热血铺陈在一线工作上，${owo.state.name}的工作逐渐得到了村民们的认可。为了达到脱贫不返贫，带领村民脱贫攻坚，${owo.state.name}还${owo.state.text4}<br>&emsp;&emsp;2020年是全面建成小康社会目标实现之年，是全面打赢脱贫攻坚战的收官之年。久久为功，在任期结束前，${owo.state.name}还准备${owo.state.text5}，从而带领村民朝着脱贫不返贫的方向迈进。<br>&emsp;&emsp;与全国280多万扶贫驻村干部一样，${owo.state.name}用实际行动彰显责任使命，用脚步丈量祖国的土地，用扶贫充实着自己的人生。`
+    this.query('p').innerHTML = `&emsp;&emsp;${owo.state.name}于2019年来到${owo.state.place}地区的贫困村，经过${owo.state.text1}后，了解到当地${textList[0]},还有${textList[1]}未能脱贫。为了带领村民脱贫，${owo.state.name}从${owo.state.text2}入手，逐渐找到了致富方向。经过一年的努力，${owo.state.name}带领村民们${owo.state.text2}。<br>&emsp;&emsp;投入扶贫事业，将一腔热血铺陈在一线工作上，${owo.state.name}的工作逐渐得到了村民们的认可。为了达到脱贫不返贫，带领村民脱贫攻坚，${owo.state.name}还${owo.state.text4}<br>&emsp;&emsp;2020年是全面建成小康社会目标实现之年，是全面打赢脱贫攻坚战的收官之年。久久为功，在任期结束前，${owo.state.name}还准备${owo.state.text5}，从而带领村民朝着脱贫不返贫的方向迈进。<br>&emsp;&emsp;与全国280多万扶贫驻村干部一样，${owo.state.name}用实际行动彰显责任使命，用脚步丈量祖国的土地，用扶贫充实着自己的人生。`
     // owo.tool.typing(this.query('p'), )
     setTimeout(() => {
       html2canvas(document.querySelector(".page11")).then(canvas => {
@@ -66,5 +61,12 @@ p {
   z-index: 999;
   transform: translate3d(0, 0, 0);
   opacity: 0;
+}
+.qr {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 1230px;
 }
 </style>

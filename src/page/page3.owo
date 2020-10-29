@@ -2,39 +2,41 @@
 .page3
   .so.so-0
     img.so.so-1(src="@|96.png|")
-    .so.so-2
-      img.so.so-3(src="@|98.png|" o-tap="next1('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')")
-      img.so.so-4(src="@|97.png|" o-tap="next1('到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。')" o-animation="shrink")
-    .so.so-5
-      img.so.so-6(src="@|99.png|" o-tap="next2('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')")
-      img.so.so-7(src="@|101.png|" o-tap="next2('统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。')" o-animation="shrink")
+    img.so.so-3(src="@|add-img-1.png|" o-tap="next1()")
+    img.so.so-6(src="@|add-img-2.png|" o-tap="next2()")
+    img.button(src="@|next.png|" o-tap="next3" o-animation="shrink")
 </template>
 <script>
 module.exports = {
+  data: {
+    text1: ''
+  },
   created: function () {
     owo.animate('fadeInDown', this.query('.so-1'))
-    owo.animate('fadeInLeft', this.query('.so-3'), 1000)
-    owo.animate('fadeInRight', this.query('.so-6'), 2000)
+    owo.animate('fadeInRight', this.query('.so-3'), 1000)
+    owo.animate('fadeInLeft', this.query('.so-6'), 2000)
     
   },
   next1: function (text) {
-    owo.animate('bounceOutLeft', this.query('.so-7'))
-    owo.animate('bounceOutRight', this.query('.so-6'), 100)
-    owo.state.text1 = '到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源。'
+    this.query('.so-3').setAttribute("o-animation", "shrink")
+    this.query('.so-6').setAttribute("o-animation", "")
+    owo.state.text1 = '到村民家走访，了解每一户的生活生产现状，挖掘村民需求，找到致贫根源'
     owo.state.stepSelect = 1
-    setTimeout(() => {
-      owo.go('page4//fade/moveFromRight/true/fade/moveFromLeft')
-    }, 1000);
-    
+    this.query('.button').style.display = 'block'
   },
   next2: function (text) {
-    owo.animate('bounceOutLeft', this.query('.so-3'))
-    owo.animate('bounceOutRight', this.query('.so-4'), 100)
-    owo.state.text1 = '统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点。'
+    this.query('.so-3').setAttribute("o-animation", "")
+    this.query('.so-6').setAttribute("o-animation", "shrink")
+    owo.state.text1 = '统计生产数据，了解当地风俗、气候、地理区委条件等，找到致富切入点'
     owo.state.stepSelect = 2
-    setTimeout(() => {
+    this.query('.button').style.display = 'block'
+  },
+  next3: function () {
+    if (owo.state.stepSelect) {
       owo.go('page4//fade/moveFromRight/true/fade/moveFromLeft')
-    }, 1000);
+    } else {
+      owo.tool.toast('点选一个方案才能下一步')
+    }
   }
 }
 </script>
@@ -62,9 +64,8 @@ module.exports = {
   z-index: -2;;
 }
 .so-3 {
-  left: 0px;
-  top: 63px;
-  z-index: -3;
+  right: 0px;
+  top: 78px;
 }
 .so-4 {
   left: 458px;
@@ -79,13 +80,19 @@ module.exports = {
   z-index: -5;
 }
 .so-6 {
-  left: 222px;
-  top: 0px;
-  z-index: -6;
+  left: 7px;
+  top: 655px;
 }
 .so-7 {
   left: 0px;
   top: 161px;
   z-index: -7;
+}
+.button {
+  position: absolute;
+  right: 93px;
+  top: 860px;
+  z-index: 999;
+  display: none;
 }
 </style>

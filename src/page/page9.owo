@@ -3,7 +3,7 @@
   .so.so-0
     img.so.so-1(src="@|page9-32.png|")
     img.so.so-2(src="@|page9-42.png|" go="page11//fade/moveFromRight/true/fade/moveFromLeft" o-animation="shrink")
-    img.so.button-2(src="@|page9-42.png|" go="page12//fade/moveFromRight/true/fade/moveFromLeft" o-animation="shrink")
+    img.so.button-2(src="@|mingxinpian.png|" go="page12//fade/moveFromRight/true/fade/moveFromLeft" o-animation="shrink")
     img.so.so-3(src="@|page9-41.png|")
 </template>
 <script>
@@ -32,8 +32,8 @@ module.exports = {
   pointer-events:  none;
 }
 .so-2 {
-  left: 203px;
-  top: 818px;
+  left: 5px;
+  top: 721px;
   z-index: 2;
 }
 .so-3 {

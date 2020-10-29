@@ -132,8 +132,7 @@ span {
 }
 .luxian {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 47px;
   margin: auto;
   top: 225px;
 }

@@ -4,7 +4,8 @@
     img.so.so-2(src="@|56.png|")
     img.so.so-3(src="@|12.png|")
     //- 输入框
-    input.so.so-1(type="text" o-animation="flicker")
+    input.so.so-1(type="text")
+    .so.so-1.so-bg(o-animation="flicker")
   //- 背景
   img.so.so-4(src="@|57.png|")
   //- 点击下一步的文字
@@ -63,7 +64,7 @@
   left: 193px;
   top: 510px;
   z-index: 2;
-  background-image: url('@|17.png|');
+  
   height: 70px;
   line-height: 70px;
   background-repeat: no-repeat;
@@ -74,6 +75,11 @@
   font-size: 40px;
   width: 180px;
   color: #96774f;
+}
+.so-1.so-bg {
+  background-image: url('@|17.png|');
+  user-select: none;
+  pointer-events: none;
 }
 .so-2 {
   left: 187px;
@@ -119,7 +125,7 @@
   margin: auto;
   opacity: 0;
   span {
-    font-size: 48px;
+    font-size: 38px;
     position: absolute;
     bottom: 50px;
     width: 165px;

@@ -14,12 +14,15 @@ module.exports = {
   created: function () {
     // 自动生成问题
     if (owo.state.select2 == 1) {
-      
+      this.query('.subject-item-1').innerText = textList[6]
+      this.query('.subject-item-2').innerText = textList[7]
+    } else {
+      this.query('.subject-item-1').innerText = textList[8]
+      this.query('.subject-item-2').innerText = textList[9]
     }
-    this.query('.subject-item-1').innerText = textList[6]
-    this.query('.subject-item-2').innerText = textList[7]
     let imageList = [
       '@|show3-1.png|',
+      '@|show1-4.png|'
     ]
     let ind = 0
     setInterval(() => {
@@ -33,10 +36,13 @@ module.exports = {
     }, 4000);
   },
   activeSubject: function () {
+    owo.state.text4 = this.$target.innerText
     this.queryAll('.subject-item').forEach(element => {
       element.classList.remove('active')
       this.$target.classList.add('active')
     });
+    // display: none;
+    this.query('.next-button').style.display = 'block'
   }
 }
 </script>
@@ -59,7 +65,7 @@ module.exports = {
   height: 80px;
   background-color: #e4ded7;
   margin: 25px auto;
-  font-size: 30px;
+  font-size: 28px;
   padding: 25px;
   line-height: 40px;
   color: #3d3c3a;
@@ -97,7 +103,7 @@ module.exports = {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    transition: opacity 1s;
+    transition: opacity 0.8s;
   }
 }
 .next-button {
@@ -106,5 +112,6 @@ module.exports = {
   right: 0;
   top: 1290px;
   margin: 0 auto;
+  display: none;
 }
 </style>
