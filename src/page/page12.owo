@@ -6,17 +6,42 @@
   .place
   img.show-image
   img.back.hide-to-image(src="@|back.png|" go="page9//fade/moveFromLeft/true/fade/moveFromRight" o-animation="shrink")
+  img.local(src="")
 </template>
 <script>
 module.exports = {
   created: function () {
     owo.tool.toast('长按图片分享海报')
     owo.state.name = owo.state.name || '你的名字'
-    owo.state.place = owo.state.place || '西安'
+    owo.state.place = owo.state.place || '陕西'
     this.query('.place').innerText = owo.state.place
     this.query('h2').innerHTML = owo.state.name
     this.query('p').innerHTML = `${owo.state.name}扶贫路线为安徽地区贫困村。与全国280多万扶贫驻村干部一样，用脚步丈量祖国的土地，用扶贫充实自己的人生，用实际行动彰显着责任和使命。`
     // owo.tool.typing(this.query('p'), )
+    console.log(owo.state.place)
+    switch (owo.state.place) {
+      case '贵州':
+        this.query('.local').src = '@|255.png|'
+        break;
+      case '山西':
+        this.query('.local').src = '@|301.png|'
+        break;
+      case '安徽':
+        this.query('.local').src = '@|281.png|'
+        break;
+      case '新疆':
+        this.query('.local').src = '@|311.png|'
+        break;
+      case '陕西':
+        console.log(this.query('.local'))
+        this.query('.local').src = '@|269.png|'
+        break;
+      case '山东':
+        this.query('.local').src = '@|289.png|'
+        break;
+      default:
+        break;
+    }
     setTimeout(() => {
       html2canvas(document.querySelector(".page12"), {
         ignoreElements: function ignoreElements(element) {
@@ -92,5 +117,12 @@ p {
 }
 .back {
   top: 115px;
+}
+.local {
+  position: absolute;
+  left: 136px;
+  right: 0;
+  top: 455px;
+  margin: 0 auto;
 }
 </style>

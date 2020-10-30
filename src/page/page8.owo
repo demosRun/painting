@@ -8,6 +8,7 @@
     .subject-item.subject-item-1(o-tap="activeSubject")
     .subject-item.subject-item-2(o-tap="activeSubject")
   img.next-button(src="@|next.png|" go="page9//fade/moveFromRight/true/fade/moveFromLeft")
+  img.step-bar(src="@|f46ec11458c72d3f465ee47a730ba56.png|")
 </template>
 <script>
 module.exports = {

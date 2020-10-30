@@ -181,3 +181,9 @@ canvas {
   top: 180px;
   z-index: 999;
 }
+
+.step-bar {
+  position: absolute;
+  left: 60px;
+  top: 119px;
+}

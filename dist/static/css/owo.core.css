@@ -978,6 +978,14 @@ li {
 .page12 .back {
   top: 115px;
 }
+
+.page12 .local {
+  position: absolute;
+  left: 136px;
+  right: 0;
+  top: 455px;
+  margin: 0 auto;
+}
 /* 页面切换动画 */
 .o-page-fade {
 	-webkit-animation: fade .7s ease both;
